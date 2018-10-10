@@ -1,0 +1,87 @@
+/* body{
+		color: #f1f1f1f1;
+} */
+
+.tudo{
+	width: 90%;
+	margin: auto;
+}
+
+.topo{
+	background-color: #3B9C00;
+	width: 90%;
+	height: 50px;
+	margin: 5px;
+	display: block;
+	/* clear: both; */
+}
+
+.titulo{
+	padding: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	color: white;
+	/* clear: both; */
+}
+
+.esquerdo{
+	background-color: green;
+	width: 60%;
+	margin: 5px;
+	/* display: block; */
+	float: left;	
+}
+
+.linhaho{
+	width: 500px;
+	height: 5px;
+	background-color: black;
+	clear: both;
+}
+
+.titulotabela{
+	text-transform: uppercase;
+	text-align: left;
+	color: black;
+}
+
+tr{
+	text-align: center;
+	border-bottom-style: outset;
+    border-bottom-color: coral;
+    border-bottom-width: 7px;
+}
+
+td{
+	text-align: center;
+	padding: 10px;
+	color: black;
+}
+
+.direito{
+	background-color: green;
+	width: 28%;
+	margin: 5px;
+	/* display: block; */
+	float: left;	
+}
+
+.titulojogos{
+	text-transform: uppercase;
+	text-align: left;
+	color: black;
+}
+
+.rodape{
+	background-color: green;
+	width: 90%;
+	margin: 5px;
+	display: block;
+	clear: both;
+}
+
+.span{
+	text-transform: uppercase;
+	text-align: right;
+	color: black;
+}
