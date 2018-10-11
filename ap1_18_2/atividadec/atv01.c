@@ -12,3 +12,4 @@ nv = pc + (pc * 30 / 100) + (pc * 10 /100);
 
 printf("Seu valor final passa a ser R$%.2f.\n", nv);
 
+}
