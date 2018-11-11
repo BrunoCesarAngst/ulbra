@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="energia.js"></script>
+  </head>
+  <body>
+    <form name="energisando" action="" method="post">
+      <h2>Quanto vou pagar de luz?</h2>
+      <br>
+      <label for="quantk">Consumo:</label>
+      <input type="text" name="quantk" id="quantk">
+      <br><br>
+      <label for="custok">Custo do Kwh R$:</label>
+      <input type="text" name="custok" id="custok">
+      <h5>***Kwh acima 100, acrescido de 25%; ultrapassando 200, acrescido de 50%.</h5>
+      <label for="res">Total a pagar R$:</label>
+      <input type="text" name="res" id="res" />
+      <input type="button" value="Calcular" class="botao" onClick="ktri()"/>
+    </form>
+  </body>
+</html>

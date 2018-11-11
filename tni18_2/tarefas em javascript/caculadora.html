@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Calc. Bruno C. Angst</title>
+    <script type="text/javascript" src="calculadora.js"></script>
+    <link rel="stylesheet" href="caculadora.css">
+  </head>
+  <body>
+    <h2>Calculadora do Bruno</h2>
+    <form name="calculando" method="post" action="">
+       <fieldset>
+          <legend>Calculadora - BCA</legend>
+          
+          <label for="valor1">Valor <strong>1</strong>:</label>
+          <input type="text" name="valor1" id="valor1" />
+          <label for="valor2">Valor <strong>2</strong>:</label>
+          <input type="text" name="valor2" id="valor2" />
+
+          <label for="oper">Operação:</label>
+          <select class="opera" name="oper" id="oper">
+             <option value="somar">+</option>
+             <option value="subtrair">-</option>
+             <option value="multiplicar">*</option>
+             <option value="dividir">/</option>
+          </select>
+
+          <label for="res">Resultado:</label>
+          <input type="text" name="res" id="res" />
+
+          <input type="button" value="Calcular" class="botao" onClick="calcular(document.calculando.oper.value)"/>
+       </fieldset>
+    </form>
