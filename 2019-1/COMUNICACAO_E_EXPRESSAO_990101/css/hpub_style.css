@@ -1,0 +1,104 @@
+/* GLOBAL VALUES
+ * -------------------------------------------------- */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16pt;
+	padding: 0;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 200;
+}
+
+p {
+	font-size: 16pt;
+	line-height: 1.4em;
+	text-align: justify;
+}
+
+img {
+	max-width: 100%;
+	margin: 5px auto;
+}
+
+video {
+	width: 100%;
+	margin: 5px auto;
+}
+
+blockquote {
+	margin: 1.0em 3.0em;
+	color: #999999;
+	border-left: 2px solid #999;
+	padding-left: 1.0em;
+}
+
+table {
+	border: 1px solid #DFDFDF;
+	background-color: #F9F9F9;
+	width: 100%;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 1px;
+	color: #333;
+}
+
+table td, table th {
+	border-top-color: white;
+	border-bottom: 1px solid #DFDFDF;
+	color: #CCC;
+}
+
+table th {
+	text-shadow: rgba(255, 255, 255, 0.796875) 0px 1px 0px;
+	font-weight: normal;
+	padding: 7px 7px 8px;
+	text-align: left;
+	line-height: 1.3em;
+	font-size: 14px;
+}
+
+table td {
+	font-size: 12px;
+	padding: 4px 7px 2px;
+	vertical-align: top;
+}
+
+/* SELECTION COLORS
+ * -------------------------------------------------- */
+.selected-yellow { background-color: #FFF864; }
+.selected-green { background-color: #C9F882; }
+.selected-blue { background-color: #81BEFB; }
+.selected-pink { background-color: #FF91C1; }
+
+
+/* UTILS
+ * -------------------------------------------------- */
+.centered {
+	text-align: center;
+}
+
+
+/* HEADERS
+ * -------------------------------------------------- */
+.header-view {
+	margin: 0;
+	text-align: center;
+}
+
+.header-image {
+	width: 100%;
+	border: 0;
+	margin: 0;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+}
+
+/* CONTENT
+ * -------------------------------------------------- */
+.content {
+	padding: 20px;
+}
