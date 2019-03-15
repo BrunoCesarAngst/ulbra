@@ -2,16 +2,14 @@
 
 int main()
 {
-  int numero, i, cont;
+  int numero, i;
 
-  cont = 0;
   printf("Informe um numero inteiro: ");
   scanf("%d/n/n", &numero );
 
-    for (i = 0; i < numero; i++){
+    for (i = 0; i <= numero; i++){
 
-      cont = i + 1;
-      printf("%d\n", cont);
+      printf("%d\n",i);
     }
 return (0);
 }
