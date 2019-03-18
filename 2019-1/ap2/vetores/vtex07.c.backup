@@ -8,14 +8,6 @@
 
 main()
 {
-	for (i = 0; i < 10; i++) {
-		printf("Digite um número para o índice [%d]: \n", i);
-		scanf("%d", &realvet[i]);
-		}
-	printf("Invorme um valor qualquer: \n", x);
-	scanf("%d", &x);
-
 	
-
 	return 0;
 }
