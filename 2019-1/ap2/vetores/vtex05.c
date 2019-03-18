@@ -8,13 +8,20 @@
 
 main()
 {
-	int num[3],
-	contador = 0;
-
-	do {
+	int vet[10],
+		i,
+		n = 0,
+		soma = 0;
+	for (i = 0; i < 10; i++) {
 		printf("Digite um número: \n");
-		scanf("%i", &num[3]);
-	contador++;
-	} while (contador < 3);
+		scanf("%i", &vet[n]);
+		if (vet[n] > 10) {
+			soma += vet[n];
+		}
+		if ((vet[n] < 0) || (vet[n] == 0)) {
+			break;
+		}
+	}
+	printf("Soma dos valores maior que 10: %i\n", soma);
 	return 0;
 }
