@@ -8,14 +8,37 @@
 
 main()
 {
+	int i, realvet[10], menor = 0, 	maior = 0, 	x, indexnew = 0;
+
 	for (i = 0; i < 10; i++) {
-		printf("Digite um número para o índice [%d]: \n", i);
+		printf("\nDigite um número para o índice [%d]: ", i);
 		scanf("%d", &realvet[i]);
 		}
-	printf("Invorme um valor qualquer: \n", x);
-	scanf("%d", &x);
-
-	
-
+			menor = realvet[0];
+			for (i = 0; i < 10; i++) {
+				if (realvet[i] < menor) {
+					menor = realvet[i];
+				}	
+			}	
+			maior = realvet[0];
+			for (i = 0; i < 10; i++) {
+				if (realvet[i] > maior) {
+					maior = realvet[i];
+				}
+			}
+		printf("Informe um valor entre %d e %d: \n", menor, maior);
+		scanf("%d", &x);
+		for (i = 0; i < 10; i++) {
+			if (realvet[i] > x) {
+				indexnew++;
+			}
+		}
+		for (int i = 0; i < indexnew; i++) {
+			if (realvet[i] > x) {
+				int copvet[i] = realvet[i];
+			}
+		}
+		for (i = 0; i < indexnew; i++)
+			printf(copvet[%d] - valor[%d]\n", i, copvet[i]);
 	return 0;
 }
