@@ -6,9 +6,9 @@
 
 #include <stdio.h>
 
-main()
+int main()
 {
-	int i, realvet[10], menor = 0, 	maior = 0, 	x, indexnew = 0;
+	int i, realvet[10], menor = 0, 	maior = 0, 	x, indexnew = 0, copvet[10];
 
 	for (i = 0; i < 10; i++) {
 		printf("\nDigite um número para o índice [%d]: ", i);
@@ -33,12 +33,13 @@ main()
 				indexnew++;
 			}
 		}
-		for (int i = 0; i < indexnew; i++) {
+		for (i = 0; i < indexnew; i++) {
 			if (realvet[i] > x) {
-				int copvet[i] = realvet[i];
+				copvet[i] = realvet[i];
 			}
 		}
-		for (i = 0; i < indexnew; i++)
-			printf(copvet[%d] - valor[%d]\n", i, copvet[i]);
+		for (i = 0; i < indexnew; i++){
+			printf("Novo índice [%d]: %d \n", i, copvet[i]);
+		}
 	return 0;
 }
