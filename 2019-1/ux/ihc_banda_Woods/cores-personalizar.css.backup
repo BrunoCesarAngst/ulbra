@@ -1,0 +1,47 @@
+.cor-fundo-menu-navegacao{
+    background-color: white;
+}
+
+.cor-logo{
+    color: red !importan;
+}
+
+.cor-item-menu{
+    color: black !important;
+}
+
+.cor-botao-principal{
+    background-color: black;
+    border-color: white;
+    color: white;
+}
+
+.cor-fundo-banner-principal{
+    background-color: black;
+}
+
+.cor-texto-banner-principal{
+    color: white;
+}
+
+.cor-icones{
+    color: black;
+}
+
+.cor-fundo-grande-paragrafo{
+    background-color: black;
+}
+
+.cor-titulo-grande-paragrafo{
+    color: white;
+}
+
+.cor-do-texto{
+    color: white;
+}
+
+.cor-botao-secundario{
+    background-color: white;
+    border-color: black;
+    color: black;
+}
