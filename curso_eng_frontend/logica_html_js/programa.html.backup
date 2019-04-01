@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>programa</title>
+	</head>
+	<body>
+		<script>
+			document.write("Minha idade é <br> 36 anos");
+			document.write("<br>");
+			document.write("36");
+			document.write("<br>");
+			document.write(26 + 10);
+			document.write("<br>");
+			document.write("26" + "10"); // concatenação
+			document.write("<br>");
+			document.write("26" + 10); // o js converte o número para texto
+			document.write("<br>");
+			document.write("A soma das idades é " + (20 + 10 + 30) + "<br>");
+			// operadores de número igual as regras matemáticas.
+			document.write("Flávio nasceu em " + (2016 - 39));
+			document.write("<br>");
+			document.write("Joaquim nasceu em " + (2016 - 20));
+			document.write("<br>");
+			document.write("Barney nasceu em " + (2016 - 40));
+		</script>
+	</body>
+</html>
