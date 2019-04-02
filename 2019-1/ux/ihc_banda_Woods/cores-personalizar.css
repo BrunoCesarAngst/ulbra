@@ -1,13 +1,16 @@
+/*Achei por bem que essa página, tivesse as cores co coutry, então, as
+ * busquei nas paletas de cores do Adobe Color*/
+
 .cor-fundo-menu-navegacao{
-    background-color: white;
+    background-color: #887d6b !important;
 }
 
 .cor-logo{
-    color: red !important;
+    color: white !important;
 }
 
 .cor-item-menu{
-    color: black !important;
+    color: white !important;
 }
 
 .cor-botao-principal{
@@ -17,11 +20,15 @@
 }
 
 .cor-fundo-banner-principal{
-    background-color: black;
+    background-color: #fdb28c;
 }
 
 .cor-texto-banner-principal{
     color: white;
+}
+
+.features-icons{
+	background-color: #887d6b !important;
 }
 
 .cor-icones{
@@ -29,7 +36,7 @@
 }
 
 .cor-fundo-grande-paragrafo{
-    background-color: black;
+    background-color: #ffcd9d;
 }
 
 .cor-titulo-grande-paragrafo{
