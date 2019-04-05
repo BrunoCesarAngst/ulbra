@@ -1,0 +1,56 @@
+// /home/bruno/ulbra/curso_eng_frontend/logica_html_js/acerte_com_.html
+// Criado em:sex 05/abr/2019 hs 09:57
+/* Propósito: Tenho que arrumar esse código */
+// Cadeira:
+// Autor: Bruno César Angst; (bruno.angst@rede.ulbra.br)
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Acerte (+função)!!!</title>
+		
+	</head>
+	<body>
+		<script>
+
+			function pulaLinha() {
+				document.write("<br><br>");
+			}
+
+			function escreva(frase) {
+				document.write(frase);
+				pulaLinha();
+			}
+
+			function sorteia(n) {
+				return Math.round(Math.random() * n);
+			}
+			
+			var numeroPensado = sorteia(10);
+			console.log(numeroPensado);
+
+			var chance = 1;
+
+			while (chance <= 3) {
+			
+				var chute = parseInt(prompt("Chute algum número de 1 a 10!"));
+
+				if (chute == numeroPensado) {
+					escreva("você acertou, pois, pensei no número " + numeroPensado + " também!");
+					break;
+				} else {
+					if (chute > numeroPensado) {
+						escreva("Seu chute foi alto!!!");
+					} else {
+						escreva("Seu chute foi muito baixo!");
+						}
+					}
+				chance++;			
+				}
+				escreva("Fim!!!")
+
+		</script>
+	</body>
+</html

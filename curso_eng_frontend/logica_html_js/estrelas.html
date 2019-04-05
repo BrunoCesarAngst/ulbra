@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Estrelando</title>
+	</head>
+	<body>
+		<script charset="utf-8">
+			function pulaLinha() {
+				document.write("<br>");
+			}
+			function escreva(frase) {
+				document.write(frase);
+				pulaLinha();
+			}
+			for (var i = 0; i < 3; i++) {
+				for (var col = 0; col < 10; col++) {
+					document.write("*");
+				}
+				pulaLinha();
+			}
+		</script>
+	</body>
+</html>
