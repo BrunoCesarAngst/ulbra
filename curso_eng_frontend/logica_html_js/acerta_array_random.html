@@ -3,14 +3,42 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
-		<title>Acerta array</title>
+		<title>Acerta array randômico</title>
 	</head>
 	<body>
 		<input/>
 		<button>Compare com o meu segredos!</button>
 		<script charset="utf-8">
 
-			var segredos = [5,7,10,2,3];
+		function sorteia() {
+			return Math.round(Math.random() * 10);
+		}
+
+		function sorteiaNumeros(quantidade) {
+			var segredos = [];
+			var numero = 1;
+			while (numero <= quantidade) {
+				var numeroAleatorio = sorteia();
+				var achou = false;
+
+				for (var posicao = 0; posicao < segredos.lenght; posicao++) {
+					if (segredos[posicao] == numeroAleatorio) {
+						achou = true;
+						break;
+					}
+				}
+
+				if (achou == false) {
+					segredos.push(numeroAleatorio);
+					numero++;
+				}
+			}
+			return segredos;
+		}
+
+			var segredos = sorteiaNumeros(3);
+			console.log(segredos);
+
 			var input = document.querySelector("input");
 			input.focus(); <!-- coloca o cursor (o foco) no input. //-->
 
@@ -39,4 +67,4 @@
 			
 		</script>
 	</body>
-</html>
+
