@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>De tanto a tanto com excessões</title>
+		
+	</head>
+	<body>
+		<script>
+
+			function pulaLinha() {
+				document.write("<br><br>");
+			}
+
+			function escreva(frase) {
+				document.write(frase);
+				pulaLinha();
+			}
+
+			var num  = 30;
+
+			while (num <= 40) {
+				if (num == 33) {
+					num += 1;
+				}
+
+				if (num == 37) {
+					num += 1;
+				} else {
+				escreva("Número " + num);
+				num = num + 1;
+				}
+			}
+
+			escreva("Fim!");
+			
+		</script>
+	</body>
+</html>
