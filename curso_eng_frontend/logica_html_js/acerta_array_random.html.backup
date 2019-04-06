@@ -19,18 +19,21 @@
 			var numero = 1;
 			while (numero <= quantidade) {
 				var numeroAleatorio = sorteia();
-				var achou = false;
+				if (numeroAleatorio !== 0) {
+					
+						var achou = false;
 
-				for (var posicao = 0; posicao < segredos.lenght; posicao++) {
-					if (segredos[posicao] == numeroAleatorio) {
-						achou = true;
-						break;
-					}
-				}
+						for (var posicao = 0; posicao < segredos.length; posicao++) {
+							if (segredos[posicao] == numeroAleatorio) {
+								achou = true;
+								break;
+							}
+						}
 
-				if (achou == false) {
-					segredos.push(numeroAleatorio);
-					numero++;
+						if (achou == false) {
+							segredos.push(numeroAleatorio);
+							numero++;
+						}
 				}
 			}
 			return segredos;
