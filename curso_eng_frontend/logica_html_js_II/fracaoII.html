@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title></title>
+	</head>
+	<body>
+		<canvas width="600" height="400"></canvas>
+		<script charset="utf-8">
+			function desenhaQuadrado(x, y, tamanho, cor) {
+				
+				var tela = document.querySelector('canvas');	
+				var pincel = tela.getContext('2d');
+
+				pincel.fillStyle = cor;
+				pincel.fillRect(x, y, tamanho, tamanho);
+				pincel.fillStroke = 'black';
+				pincel.strokeRect(x, y, tamanho, tamanho);
+			
+			}
+
+			function desenhaTexto(texto, x, y) {
+				var tela = document.querySelector('canvas');
+				var pincel = tela.getContext('2d');
+
+				pincel.font = '20px Grorgia';
+				pincel.fillStyle = 'black';
+				pincel.fillText(texto, x, y);
+			}
+
+			desenhaTexto('Qual é a fração?', 50, 30);
+
+			var y = 100;			
+			desenhaQuadrado(50, y, 100, 'green');
+			desenhaQuadrado(150, y, 100, 'green');
+			desenhaQuadrado(250, y, 100, 'green');
+			desenhaQuadrado(350, y, 100, 'white');
+
+		</script>
+	</body>
+</html>

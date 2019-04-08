@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title></title>
+	</head>
+	<body>
+		<canvas width="600" height="400"></canvas>
+		<script charset="utf-8">
+			var tela = document.querySelector('canvas');
+			var pincel = tela.getContext('2d');
+			pincel.fillStyle = 'lightgray';
+			pincel.fillRect(0, 0, 600, 400);
+
+			function desenhaCirculo(x, y, raio, cor) {
+
+				pincel.fillStyle = cor;
+				pincel.beginPath();
+				pincel.arc(x, y, raio, 0, 2*3.14);
+				pincel.fill();
+			}
+			
+			desenhaCirculo(300, 180, 10, 'red');
+			desenhaCirculo(280, 200, 10, 'yellow');
+			desenhaCirculo(300, 200, 10, 'orange');
+			desenhaCirculo(320, 200, 10, 'black');
+			desenhaCirculo(300, 220, 10, 'blue');
+
+			function desenhaFlor(x, y) {
+				
+				desenhaCirculo(x, y-20, 10, 'red');
+				desenhaCirculo(x-20, y, 10, 'yellow');
+				desenhaCirculo(x, y, 10, 'orange');
+				desenhaCirculo(x+20, y, 10, 'black');
+				desenhaCirculo(x, y+20, 10, 'blue');
+
+			}
+			
+			desenhaFlor(150, 100);
+
+		</script>
+	</body>
+</html>
