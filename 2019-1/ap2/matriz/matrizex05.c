@@ -1,12 +1,12 @@
-// /home/bruno/ulbra/2019-1/ap2/matriz/matrizex04.c
-// Criado em:dom 07/abr/2019 hs 06:46
-/* Propósito: *Escreva um programa que faz a leitura de duas matrizes de 10 linhas e 2 colunas. Cada linha da matriz armazena duas notas de um aluno. A primeira matriz armazena as notas de G1 e a segunda as notas de G2. Após a leitura das duas matrizes calcule a média final de cada um dos alunos e armazene em um vetor de 10 posições. Importante a média das notas é aritmética. Escreva o vetor resultante na tela. Importante: a nota final de G1 é obtida pela média das duas notas da matriz G1. A nota de G2 é obtida pela média das duas notas da matriz de G2. */
+// /home/bruno/ulbra/2019-1/ap2/matriz/matrizex05.c
+// Criado em:dom 07/abr/2019 hs 16:12
+/* Propósito: Reescreva o programa do exercício 4 utilizando a média ponderada (G1 peso 1 e G2 peso 2). */
 // Cadeira:
 // Autor: Bruno César Angst; (bruno.angst@rede.ulbra.br)
 
 #include <stdio.h>
 #include <string.h>
-#define l 10
+#define l 2
 #define c 2
 
 int main()
@@ -45,7 +45,7 @@ int main()
 	
 	printf("\n");
 	for (int i = 0; i < l; i++) {
-		mediaFinal[i] = (mediaG1[i] + mediaG2[i]) / 2;
+		mediaFinal[i] = (mediaG1[i] + (mediaG2[i] * 2)) / 3;
 		printf("O aluno %d teve média final: %0.2f \n", i + 1, mediaFinal[i]);
 	}
 
