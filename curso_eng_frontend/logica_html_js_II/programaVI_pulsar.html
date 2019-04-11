@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title></title>
+	</head>
+	<body>
+		<canvas width="600" height="400"></canvas>
+		<script charset="utf-8">
+			var tela = document.querySelector('canvas');
+			var pincel = tela.getContext('2d');
+			pincel.fillStyle = 'lightgray';
+			pincel.fillRect(0, 0, 600, 400);
+
+			function desenhaCirculo(x, y, raio) {
+				pincel.fillStyle = 'blue';
+				pincel.beginPath();
+				pincel.arc(x, y, raio, 0, 2 * Math.PI);
+				pincel.fill();
+			}
+
+			function limpaTela() {
+				pincel.clearRect(0, 0 , 600, 400);
+			}
+
+			var raio = 20;
+			var fatorCrescimento = 1; // encrementador
+			function atualizaTela() {
+				limpaTela();
+
+				if (raio > 30) { // quando for maior que 30 decremanta
+					fatorCrescimento = -1; // fazendo a bolinha voltar.
+				} else if (raio < 20) { // quando for menor que 20 encremanta
+					fatorCrescimento = 1;    // efeito vai-e-vem.
+				}
+
+				desenhaCirculo(300, 200, raio);
+				raio += fatorCrescimento; 
+							// essa equação recebe a verificação do if
+				              // alterando a posição de x
+			}
+
+			setInterval(atualizaTela, 20); // 20 é taxa de milissegundos.
+
+		</script>
+	</body>
+</html>
