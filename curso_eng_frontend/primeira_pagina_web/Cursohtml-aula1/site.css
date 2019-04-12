@@ -1,0 +1,37 @@
+body {
+	font-family: "Crimsom Test", "Times New Roman", serif;
+	background-color: #f2fffc;
+	font-size: 120%;
+}
+
+main h1 {
+	font-size: 60px;
+	background-color: #851944;	
+	color: #FFF;
+	text-align: center;	
+}
+h1, h2 {
+	font-family: "Open Sans Condensed", "Arial", Sans-serif;
+}
+
+p {
+	text-align: justify;
+}
+
+blockquote {
+	background-color: #d9e5e3;
+}
+
+aside {
+	background-color: #3c1d3d;
+	color: #f2fffc;
+}
+
+nav a {
+	color: #f2fffc;
+}
+
+footer {
+	background-color: #000000;
+	color: #f2fffc;
+}
