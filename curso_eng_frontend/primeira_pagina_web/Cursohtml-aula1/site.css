@@ -2,6 +2,16 @@ body {
 	font-family: "Crimsom Test", "Times New Roman", serif;
 	background-color: #f2fffc;
 	font-size: 120%;
+	line-height: 1.5;
+}
+
+main {
+}
+
+main div {
+	width: 720px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 main h1 {
@@ -9,7 +19,24 @@ main h1 {
 	background-color: #851944;	
 	color: #FFF;
 	text-align: center;	
+	padding: 25px;
+	margin: 0;
+	border-bottom: 10px solid #000;
 }
+
+main a {
+	color: #851944;
+}
+
+aside {
+	text-align: center;
+}
+
+aside a {
+	color: inherit;
+	font-family: "Open Sans Condensed", Sans-serif;
+}
+
 h1, h2 {
 	font-family: "Open Sans Condensed", "Arial", Sans-serif;
 }
@@ -20,11 +47,24 @@ p {
 
 blockquote {
 	background-color: #d9e5e3;
+	padding: 20px;
+	border: 10px solid #c2ccca;
+	width: 250px;
+	margin: 0;
+	box-sizing: border-box;
+	border-bottom-color: #333;
+    border-right-color: #FFF;
 }
 
 aside {
 	background-color: #3c1d3d;
 	color: #f2fffc;
+	text-decoration: none;
+	padding: 20px;
+}
+
+aside a {
+	text-decoration: none;
 }
 
 nav a {
@@ -34,4 +74,5 @@ nav a {
 footer {
 	background-color: #000000;
 	color: #f2fffc;
+	padding: 20px;
 }
