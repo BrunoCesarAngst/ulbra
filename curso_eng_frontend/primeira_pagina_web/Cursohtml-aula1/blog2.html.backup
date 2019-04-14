@@ -17,9 +17,9 @@
 	<body>
 
 			<main>
-					<h1 class="titulo-pagina">Blog</h1>
+					<h1>Blog</h1>
 
-					<div class="texto-centralizado">
+					<div>
 							<article>
 							<h2>O essencial de design responsivo</h2>
 							<time datetime="2014-07-01" pubdate="">01 de Julho de 2014</time>
