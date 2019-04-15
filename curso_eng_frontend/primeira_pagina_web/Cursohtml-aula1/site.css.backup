@@ -30,6 +30,7 @@ main h1 {
 	padding: 25px;
 	margin: 0;
 	border-bottom: 10px solid #000;
+	text-transform: uppercase;
 }
 
 main a {
@@ -41,9 +42,6 @@ aside a {
 	font-family: "Open Sans Condensed", Sans-serif;
 }
 
-.icones-sociais li {
-	display: inline-block;
-}
 
 h1 {
 	font-family: "Open Sans Condensed", "Arial", Sans-serif;
@@ -91,6 +89,21 @@ aside h1 {
 
 nav a {
 	color: #f2fffc;
+}
+
+.icones-sociais li {
+	display: inline-block;
+}
+
+.icones-sociais a {
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	text-indent: -9999px;
+}
+
+.github {
+	background-image: url(github.png);
 }
 
 footer {
