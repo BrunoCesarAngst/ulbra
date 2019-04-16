@@ -1,0 +1,7 @@
+coc.nvim             tcomment_vim        vim-bufferline   vim-repeat
+Conque-GDB           tlib_vim            vim-css3-syntax  vim-snipmate
+nerdtree             vdebug              vim-css-color    vim-snippets
+nerdtree-git-plugin  vim-addon-mw-utils  vim-gitgutter    vim-surround
+omnisharp-vim        vim-airline         vim-less
+scss-syntax.vim      vim-airline-themes  vim-polyglot
+

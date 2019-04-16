@@ -17,7 +17,7 @@ int main()
 		}
 	}
 
-	printf("\nQuantas vezes ocorre o número: ");
+	printf("Quantas vezes ocorre o número: \n");
 	scanf("%d", &num);
 
 	for (int l = 0; l < 4; l++) {

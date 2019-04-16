@@ -12,12 +12,11 @@ int main()
 	int l, c, v;
 	for (int l = 0; l < 3; l++) {
 		for (int c = 0; c < 4; c++) {
-			printf("Digite um número para L[%d] - C[%d]: ", l, c);
+			printf("\nDigite um número para L[%d] - C[%d]: ", l, c);
 			scanf("%d", &v);
 			matriz[l][c] = v * 10;
 		}
 	}
-	printf("\n");
 	for (int l = 0; l < 3; l++) {
 		for (int c = 0; c < 4; c++) {
 			printf("%4.0d", matriz[l][c]);

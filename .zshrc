@@ -98,8 +98,10 @@ virtualenv
 brew
 github
 pip
+docker
 docker-compose
 docker-machine
+boot2docker
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -138,3 +140,4 @@ export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
 
+source ~/.dotfiles/lib/zsh-autoenv/autoenv.zsh

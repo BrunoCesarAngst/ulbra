@@ -5,6 +5,7 @@
 // Autor: Bruno César Angst; (bruno.angst@rede.ulbra.br)
 
 #include <stdio.h>
+#include <string.h>
 
 int main()
 {

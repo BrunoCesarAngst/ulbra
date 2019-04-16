@@ -5,7 +5,6 @@
 // Autor: Bruno César Angst; (bruno.angst@rede.ulbra.br)
 
 #include <stdio.h>
-#include <string.h>
 #define l 10
 #define c 2
 

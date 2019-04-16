@@ -2,6 +2,13 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+#################### vim como editor padrão #######################
+
+export EDITOR=vim
+export VISUAL=vim
+
+#################### vim como editor padrão #######################
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
