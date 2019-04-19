@@ -1,8 +1,8 @@
 .citacao-bio {
     background-color: #D9E5E3;
-    border: 10px solid #C2CCCA;
-    padding: 20px;
-    margin: 20px 40px;
+    border: .5em solid #C2CCCA;
+    padding: 1em;
+    margin: 1em 2em;
     width: 250px;
     box-sizing: border-box;
 }
