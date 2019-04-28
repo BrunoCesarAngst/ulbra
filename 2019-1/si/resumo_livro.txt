@@ -1,0 +1,74 @@
+  Sistema de Informação
+
+  A aplicação do SI está transformando o mundo dos negócios, com diversos sistemas e aplicativos que auxiliam na manutenção e gerenciamento dos departamentos de uma empresa, que por sua vez, fornece vantagens competitivas.
+  Com o advento de um mundo computacional o SI é a ferramenta que orquestra a a gama de possibilidades do uso de programas computacional, visando o seu melhor uso.
+  O SI dá as empresas a oportunidade de tirar proveito das novas tecnologias como, ter sua empresa na internet, para se ter mais eficiência, facilitando desde o acesso de novos clientes, o gerenciamento dos estoques, assim como, ter um contato mais próximo de seus clientes, através das mídias sociais.
+  Os objetivos organizacionais dos SI são: 
+  Excelência operacional - quando o sistema tem a capacidade de gerar uma informação mediante a um fato.
+  Novos produtos, serviços e modelos de negócios - a partir, de novos modelos de negócios, são criados novos produtos e serviços, que substituem os atuais produtos e serviços.
+  Relacionamento mais estreito com clientes e fornecedores - sistemas que personalizam, a partir, do perfil digital do usuário.
+  Melhor tomada de decisões - sistemas que obtêm dados em tempo real para ajudar na tomada de decisões.
+  Vantagem competitiva - através da aplicação dos objetivos anteriores a empresa estará sem em vantagem.
+  Sobrevivência - as empresas para se manterem no mercado atual devem priorizar o investimento em sistemas e tecnologias de informação.
+  O sistema de informação
+  Um conjunto de componentes relacionados entre si que coletam (ou recuperam), processam, armazenam e distribuem informações que servem para apoiar a tomada de decisões, a coordenação e o controle de uma organização, ajudando gerentes e trabalhadores a analisar problemas, visualizar assuntos complexos e criar novos produtos. O sistema retem dados (sequencia de fatos, não analisados), transformando em informação (dados organizados e apresentado de forma útil), assim, capturando dados disponíveis (entrada), convertendo e dando sentido a esses dados (processamento) e transferindo as informações ao requerente (saída), retornando um feedback para avaliar e ou corrigir o estágio de entrada.
+  Resolução de problemas com SI em organizações
+  Nas empresas, os problemas estão divididos em três categorias: organização tecnologia e pessoas. 
+  Então identifica-se o problema (entendimento), propõem-se a(s) solução(ões) (em quais fatores), avalia-se as propostas escolhendo a solução (estão bem apoiadas) e a implanta, recorrendo a feedbacks em todo o processo (a avaliação de conduzir o processo).
+  Diferentes tipos de SI
+  Organização básica empresarial
+  Manufatura e produção; vendas e marketing; recursos humanos; finanças e contabilidade. Esse é o básico para gerar produto ou serviço.
+  Processos de negócios
+  São as tarefas concretas que descrevem como o trabalho é organizado em uma empresa, a eficiência de uma empresa depende, do planejamento e da coordenação de seus processos de negócios.
+  Administração e hierarquias
+  Gerência sênior estratégias de longo prazo que garantem desempenho financeiro, gerência média direciona a estratégias da gerência sênior - cientistas e trabalhadores do conhecimento projetando produtos ou serviços, gerência operacional monitora as atividades diárias - trabalhadores dos serviços e da produção fabricam o produto ou prestam o serviço, trabalhadores de dados cuidam dos documentos e registros.
+  Tipos de SI empresarial
+  Sistemas para diferentes níveis de gerência
+  Sistemas de processamento de transações(SPTs)
+  Vendas, recebimentos, entrada de dinheiro; quantas peças tem? o que aconteceu com o pagamento do sr Guilherme?; essas informações devem ser de fácil acesso atualizadas e precisas. É um sistema de suma importância.
+  Sistemas de informações gerenciais(SIGs)
+  Monitoram, o controle a tomada de decisão e as atividades administrativas, ou seja, tudo está funcionando?
+  Sistemas de apoio a decisão(SADs)
+  Gerencia a tomada de decisão que são comuns, foco em problemas únicos e medem mudanças ocasionais fazendo uso de informações internas(SPT e SI) e externas reunindo grandes quantidades de dados.
+  Sistema de apoio ao executivo(SAEs)
+  Gerencia questões estratégicas e tendências de longo prazo, olham para questões como o nível de emprego em cinco anos, coisas assim de olho no futuro dos negócios.
+  Sistemas que abrangem toda a empresa
+  Como, quanto e de forma
+  Aplicativos integrados
+  Todos esses sistemas devem andar de mãos dadas, usando aplicativos integrados, são eles:
+  Sistemas integrados(ERP) - Integram processos de negócios nas áreas de manufatura e produção, finanças e contabilidade, vendas e marketing recursos humanos em um único software e assim, tomadas de decisão mais precisas e apropriadas.
+  Sistemas de gestão da cadeia de suprimentos(SCM) - Administra uma relação com os fornecedores visando precisão na logística de produto.
+  Sistemas de gestão do relacionamento com o cliente(CRM) - Otimizar a receita, a satisfação e a relação do cliente.
+  Sistemas de gestão do conhecimento(SGCs) - Melhorar seus processos para capturar e aplicar conhecimento com as experiências, para usos posteriores o conhecimento empresarial.
+  Sistemas de colaboração e trabalho em equipe
+  Como trabalhar juntos em um único objetivo
+  Colaboração compartilhar de uma mesma meta ou objetivo é o mais importante.
+  Natureza mutável do trabalho - antes o processos eram isolados e supervisionados, agora trabalhamos com interação das partes envolvidas.
+  Crescimento do trabalho profissional - compartilhamos a informação para realizar o trabalho.
+  Organização mutável da empresa - Trabalhando como equipe, com métodos próprios.
+  Escopo mutável da empresa - hoje trabalhamos de maneira global não estando mas pressos a localidade.
+  Ênfase na inovação - a inovação não vem de trabalhos individuais e sim de frentes colaborativas.
+  Cultura mutável do trabalho e dos negócios - trabalhar como equipe é melhor e mais eficaz.
+  A função dos SI na empresa
+  Quem controla tudo isso?
+  O departamento de SI, cuida da manutenção dos equipamentos, programas, os dados armazenados, redes e tecnologias envolvidas.
+  O departamento de SI
+  Programadores, analistas de sistemas,gerente de SI, executivo-chefe de informação, executivo-chefe de segurança, executivo-chefe de privacidade, executivo-chefe de conhecimento, usuário final.
+  SI conquistando vantagem competitiva
+  Uso eficiente de recursos
+  Modelo das forças competitivas de Porter
+  Concorrentes tentando atrair mais clientes.
+  Novas empresas com equipamentos novos com pessoal de custo baixo e inovador, sem marcas antigas ou desgastadas, com motivação.
+  Produtos e serviços substitutos
+  Cada dia surgem novos produtos e serviços e novas tecnologias que vão se substituindo .
+  Clientes com liberdade na escolha de melhores opção de compra
+.
+  Fornecedores quanto mais uma empresa tem, mais controle de preço, qualidade e prazos se conquista.
+  Concorrência em processos de negócios
+  Mudanças que auxiliam na gestão de processos de negócios
+  A gestão de processos de negócios(BPM) - melhora contínua através de ferramentas e metodologias.
+  Identificar os processos a serem modificados - o que precisa ser aperfeiçoado (renovado) para se ter eficiência maquinário, pessoal.
+  Analisar processos existentes - modelando e documentando processos existentes para medir a sua eficiência.
+  Planejando o novo processo - novos processos devem ser comparados ao anterior para ser possível perceber economia e eficácia.
+  Implantando novos processos - o novo processo se torna uma nova regra de negócios.
+  Avaliar continuamente - para que não aja desgaste ao longo do tempo há uma avaliação contínua dos processos.
