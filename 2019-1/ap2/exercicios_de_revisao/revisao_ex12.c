@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-main()
+int main()
 {
 	float valor,
 		  total = 0,
@@ -16,10 +16,10 @@ for(x = 1; x <= 200; x++)
 	numero ++;
 	if(valor > maiorvenda)
 		maiorvenda = valor;
-	__fpurge(stdin);
+	_fpurge(stdin);
 
 	printf("Outra venda (S/N)? ");
-	scanf("%s", outra);
+	scanf("%s", &outra);
     if(outra == "N" || outra == "n")
 		{
          printf("\n Venda encerrada!");

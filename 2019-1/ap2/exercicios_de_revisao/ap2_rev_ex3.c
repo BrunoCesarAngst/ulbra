@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
     int resp;
     do {
         printf("Digite un numero: \n");
-        scanf("%d", &resp);
+        scanf(" %d", &resp);
     } while (resp != 0);
     return 0;
 }
