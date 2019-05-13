@@ -2,13 +2,6 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-#################### vim como editor padrão #######################
-
-export EDITOR=vim
-export VISUAL=vim
-
-#################### vim como editor padrão #######################
-
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -25,15 +18,6 @@ shopt -s histappend
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
 HISTFILESIZE=2000
-
-# Powerline
-function _update_ps1() {
-    PS1=$(powerline-shell $?)
-}
-
-if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-fi
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -131,5 +115,12 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-. /usr/local/bin/powerline/powerline/bindings/bash/powerline.sh
-. /usr/local/bin/powerline/powerline/bindings/bash/powerline.sh
+export EDITOR='/usr/bin/nvim'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+vipsql() {
+    vim -c 'setlocal buftype=nofile | setlocal ft=sql | VipsqlOpenSession '"$*"
+}

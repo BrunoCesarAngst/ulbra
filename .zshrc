@@ -19,24 +19,6 @@ ZSH_THEME="agnoster"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
-# Powerline
-function powerline_precmd() {
-    PS1="$(powerline-shell --shell zsh $?)"
-}
-
-function install_powerline_precmd() {
-  for s in "${precmd_functions[@]}"; do
-    if [ "$s" = "powerline_precmd" ]; then
-      return
-    fi
-  done
-  precmd_functions+=(powerline_precmd)
-}
-
-if [ "$TERM" != "linux" ]; then
-    install_powerline_precmd
-fi
-
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
@@ -81,28 +63,13 @@ fi
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+git
 zsh-autosuggestions
 zsh-syntax-highlighting
-git
-git-prompt
-bundler
-vim-interaction
-web-search
-command-not-found
-copydir
-copyfile
-cp
-django
-python
-virtualenv
-brew
-github
-pip
-docker
-docker-compose
-docker-machine
-boot2docker
+zsh-completions
+tmux
 )
+autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
 
@@ -123,9 +90,6 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -135,9 +99,13 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
-export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"
-export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
+# opam configuration
+test -r /home/bruno/.opam/opam-init/init.zsh && . /home/bruno/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+export EDITOR='/usr/bin/nvim'
 
-source ~/.dotfiles/lib/zsh-autoenv/autoenv.zsh
+export NVM_DIR="/home/bruno/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+vipsql() {
+    vim -c 'setlocal buftype=nofile | setlocal ft=sql | VipsqlOpenSession '"$*"
+}
