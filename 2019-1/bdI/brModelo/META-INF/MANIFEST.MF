@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.7
+Created-By: 1.8.0_131-b11 (Oracle Corporation)
+Class-Path: lib/AbsoluteLayout.jar
+X-COMMENT: Main-Class will be added automatically by build
+Main-Class: principal.Aplicacao
+SplashScreen-Image: META-INF/icone.png
+

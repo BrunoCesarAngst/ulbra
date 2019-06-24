@@ -27,41 +27,45 @@ int main()
     int i, counter = 0;
 
     for (i = 0; i < v; ++i) {
-        do {
-            printf("\n\t Cadastro de Automóveis \n");
-            printf("Digite a placa do automóvel: ");
-            gets(car[i].plate);
-            printf("Nome do automóvel: ");
-            gets(car[i].name);
-            printf("Marca do automóvel: ");
-            gets(car[i].mark);
-            printf("Ano do automóvel: ");
-            scanf("%d", &car[i].year);
-            printf("Km do automóvel: ");
-            scanf("%d", &car[i].km);
-            __fpurge(stdin);
-            do {
-                printf("\n Deseja cadastrar outro automóvel(S ou N)? ");
-                scanf("%c", &add_in);
-                __fpurge(stdin);
-                if ((add_in != 's' || add_in != 'S') ||
-                        (add_in != 'n'|| add_in != 'N'))  {
-                    printf("\n Digite S ou N!!!");
-                }
-            } while ((add_in != 's' || add_in != 'S') ||
-                     (add_in != 'n'|| add_in != 'N'));
-            counter++;
-        } while (add_in == 's' || add_in == 'S');
-        if (add_in == 'n' || add_in == 'N') {
+        printf("\n\t Cadastro de Automóveis \n");
+        printf("Digite a placa do automóvel: ");
+        gets(car[i].plate);
+        printf("Nome do automóvel: ");
+        gets(car[i].name);
+        printf("Marca do automóvel: ");
+        gets(car[i].mark);
+        printf("Ano do automóvel: ");
+        scanf("%d", &car[i].year);
+        printf("Km do automóvel: ");
+        scanf("%d", &car[i].km);
+        __fpurge(stdin);
+        counter++;
+        if (counter == v){
+            printf("\n Cadastro concluído digite N!!!");
             break;
+        } else if (counter < v) {
+            printf("\n Deseja cadastrar outro automóvel(S ou N)? ");
+            scanf(" %c", &add_in);
+            __fpurge(stdin);
+            switch (add_in) {
+                case 's': case 'S':
+                    printf("\n Ok! outro cadastro \n");
+                    break;
+                case 'n': case 'N':
+                    printf("\n\t Cadastro concluído! \n");
+                    continue;
+                default:
+                    printf("\n\t !!!Digite S ou N!!! \n");
+                    break;
+            }
         }
     }
 
-    if (add_in == 'n' || add_in == 'N') {
+    if (counter == v && (add_in == 'n' || add_in == 'N'))   {
         printf("\n\t Pesquisa por placa \n");
         printf("Placas cadastradas: ");
         for (i = 0; i < counter; ++i) {
-            printf("%s", car[i].plate);
+            printf(" %s", car[i].plate);
         }
         printf("\n Qual placa desejas consultar: ");
         gets(consult);

@@ -8,11 +8,11 @@
       <ExibirLog Valor="False"/>
     </Configuracoes>
     <Arquivos>
-      <Arq01 Valor="Z:\HOME\BRUNO\ULBRA\2019-1\BDI\LOCADORA.BRM"/>
-      <Arq02 Valor="Z:\HOME\BRUNO\ULBRA\2019-1\BDI\LOGICO_2.BRM"/>
-      <Arq03 Valor="Z:\HOME\BRUNO\ULBRA\2019-1\BDI\LOCADORACONCEITO.BRM"/>
-      <Arq04 Valor=""/>
-      <Arq05 Valor=""/>
+      <Arq01 Valor="Z:\HOME\BRUNO\ULBRA\2019-1\BDI\CONCEITUAL_3.BRM"/>
+      <Arq02 Valor="Z:\HOME\BRUNO\ULBRA\2019-1\BDI\CONCEITUAL_1 (1).BRM"/>
+      <Arq03 Valor="Z:\HOME\BRUNO\ULBRA\2019-1\BDI\LOGICO_2.BRM"/>
+      <Arq04 Valor="Z:\HOME\BRUNO\ULBRA\2019-1\BDI\CONCEITUAL_FINAL02.BRM"/>
+      <Arq05 Valor="Z:\HOME\BRUNO\ULBRA\2019-1\BDI\CONCEITUAL_12.BRM"/>
     </Arquivos>
   </CONFIGURACAO><AJUDA>
     <Flash>##&#13;

@@ -1,4 +1,4 @@
-/*Crie um programa na linguagem C que permita cadastrar até 40 clientes
+/*Crie um programa na linguagem C que permita cadastrar até 40 clientes{{{
 (código, nome, endereço, telefone e e-mail). O programa deve permitir as
 operações: inclusão, alteração por código, consulta por nome e
 listar(relatório). O seguinte menu deve ser apresentado ao usuário:
@@ -19,7 +19,7 @@ o usuário escolher novamente a opção de Incluir, nenhum dado pode ser
 sobrescrito. Cada novo cliente deve ser cadastrado na sequencia
 (após o anterior). Para tanto, será necessário uma variável que indique o
 numero de elementos no vetor. Para a opção de relatório todos os clientes
-cadastrados devem ser listados. */
+cadastrados devem ser listados. *//*}}}*/
 
 #include <stdio.h>
 #include <string.h>
