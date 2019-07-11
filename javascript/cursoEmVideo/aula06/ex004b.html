@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Ex004b</title>
+  </head>
+  <body>
+    <script charset="utf-8">
+      var n = Number(window.prompt('Digite um numero real (xx.xx)'))
+      document.write(`Número informado ${n} sem tratamento.<br>`)
+      document.write(`${n.toFixed(2)} tratando 2 casas depois da vírgula.<br>`)
+      document.write(`${n.toFixed(2).replace('.', ',')}
+      //tratando trocando ponto por vírgula.<br>`)
+      document.write(`${n.toLocaleString(`pt-BR`, {
+        style: `currency`,
+        currency: `BRL`
+      })} tratando como moeda corrente.`)
+    </script>
+  </body>
+</html>

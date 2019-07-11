@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Ex005</title>
+    <style type="text/css" media="screen">
+      body{
+        background: lightblue;
+        color: white;
+        font: normal 18pt Arial;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Iniciando Estudos Dom</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Apredendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">
+      Clique em mim
+    </div>
+    <script>
+      var corpo = document.body
+      var p1 = document.getElementsByTagName('p')[0]
+      window.document.write(p1.innerText)
+      /*
+      var d = document.getElementById('msg')
+      d.innerText = 'Bruno'
+      */
+      var d = window.document.querySelector('div#msg')
+      d.style.background = 'blue'
+    </script>
+  </body>
+</html>
