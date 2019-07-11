@@ -1,0 +1,7 @@
+# Para todos os arquivos e sub-pastas localizados na pasta
+node_modules/
+# Para arquivos Java compilados
+
+# Para código C
+
+# Para todos os arquivos e sub-pastas localizados na pasta bower_components/
