@@ -8,7 +8,7 @@ const imprimirResultado = function(nota) {
             console.log('Aprovado');
             break;
         case 6: case 5: case 4:
-            console.log('Substituição');
+            console.log('Substituição')
             break;
         case 3: case 2: case 1: case 0:
             console.log('Reprovado');
