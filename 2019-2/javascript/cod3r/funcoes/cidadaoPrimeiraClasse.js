@@ -9,12 +9,12 @@ const func2 = function () { } // uma função anonima atribuida a uma constante.
 func2() // envocando a função
 
 // Armazenar uma função dentro de uma Array.
-const array = [function(a, b) {return a + b}, func1, func2]
+const array = [function (a, b) { return a + b }, func1, func2]
 console.log(array[0](3, 2)) // 5
 
 // Armazenar funções em atributos de objetos.
 const obj = {}
-obj.falar = function () {return 'Olá'}
+obj.falar = function () { return 'Olá' }
 console.log(obj.falar()) // Olá
 console.log(obj) // { falar: [Function] }
 
