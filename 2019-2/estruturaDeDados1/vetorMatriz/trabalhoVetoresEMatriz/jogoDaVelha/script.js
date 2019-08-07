@@ -1,6 +1,6 @@
 letra = "X"
 
-function joga(celula){
+function jogar(celula){
     celulaclicada = document.getElementById(celula).innerHTML;
    if (celulaclicada == "X" || celulaclicada == "O"){
        alert("Opa, este quadrado já foi escolhido!")
@@ -14,7 +14,7 @@ function joga(celula){
    }
 }
 
-function verif(){
+function verificarTrinca(){
    c11 = document.getElementById('cel11').innerHTML
    c12 = document.getElementById('cel12').innerHTML
    c13 = document.getElementById('cel13').innerHTML
@@ -26,11 +26,11 @@ function verif(){
    c33 = document.getElementById('cel33').innerHTML
    if (((c11 != '') && (c12 != '') && (c13 != '') && (c11 == c12) && (c12 == c13)) || ((c11 != '') && (c22 != '') && (c33 != '') && (c11 == c22) && (c22 == c33)) || ((c11 != '') && (c21 != '') && (c31 != '') && (c11 == c21) && (c21 == c31)) || ((c21 != '') && (c22 != '') && (c23 != '') && (c21 == c22) && (c22 == c23)) || ((c31 != '') && (c32 != '') && (c33 != '') && (c31 == c32) && (c32 == c33)) || ((c12 != '') && (c22 != '') && (c32 != '') && (c12 == c22) && (c22 == c32)) || ((c13 != '') && (c23 != '') && (c33 != '') && (c13 == c23) && (c23 == c33)) || ((c31 != '') && (c22 != '') && (c13 != '') && (c31 == c22) && (c22 == c13))){
        alert('Você ganhou! Parabéns campeão!')
-      novo()
+      iniciarNovoJogo()
    }
 }
 
-function novo(){
+function iniciarNovoJogo(){
     for (i=1; i<4; i++){
 		for (j=1; j<4; j++){
     		nomecelula = 'cel' + i + j
