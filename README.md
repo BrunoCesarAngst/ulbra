@@ -12,7 +12,7 @@
 
 Projetos Especiais!!!
 
-* [TINDEV - OmniStack 8.0](https://github.com/BrunoCesarAngst/ulbra/tree/master/2019-2/OmniStack "Ficou Show")
+* [TINDEV - OmniStack 8.0 | Rocketseat](https://github.com/BrunoCesarAngst/ulbra/tree/master/2019-2/OmniStack "Ficou Show")
 
 <!-- *enfatizado* (e.g., itálico) -->
 
