@@ -1,7 +1,7 @@
 const { Schema, model } = require('mongoose');
 
 const DevSchema = new Schema({
-    login: {
+    name: {
         type: String,
         required: true,
     },

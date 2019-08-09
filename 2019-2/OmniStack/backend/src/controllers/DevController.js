@@ -21,7 +21,7 @@ module.exports = {
     async store(req, res) {
         const { username } = req.body;
 
-        const userExist = await Dev.findOne({ login: username });
+        const userExist = await Dev.findOne({ user: username });
 
         if (userExist) {
             return res.json(userExist);
