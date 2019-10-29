@@ -1,0 +1,56 @@
+/*Acabei fazendo uso de cores básicas e primárias, pois, participei do
+ * projeto Pró-infância da minha cidade, e aprendi que a junção dessas cor
+ * facilitam o poder cognitivo em crianças que estão em fase de
+ * desenvolvimento.*/
+
+.cor-fundo-menu-navegacao{
+    background-color: yellow !important;
+}
+
+.cor-logo{
+    color: black;
+}
+
+.cor-item-menu{
+    color: black !important;
+}
+
+.cor-botao-principal{
+    background-color: black;
+    border-color: white;
+    color: white;
+}
+
+.cor-fundo-banner-principal{
+    background-color: green !important;
+}
+
+.cor-texto-banner-principal{
+    color: white;
+}
+
+.btn-primary {
+	background-color: blue !important;
+}
+
+.cor-icones{
+    color: red !important;
+}
+
+.cor-fundo-grande-paragrafo{
+    background-color: green;
+}
+
+.cor-titulo-grande-paragrafo{
+    color: white;
+}
+
+.cor-do-texto{
+    color: white;
+}
+
+.cor-botao-secundario{
+    background-color: white;
+    border-color: black;
+    color: blue !important;
+}

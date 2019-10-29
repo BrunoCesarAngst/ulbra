@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" name="nome" id="nome" class="nome">
+      <button class="botao">Adicionar</button>
+      <br />
+    </div>
+
+    <script>
+      var linkElement = document.createElement('a')
+
+      linkElement.setAttribute('href', 'http://rocketseat.com.br')
+      linkElement.setAttribute('title', 'Site da Rocketseat')
+
+      var textElement = document.createTextNode('Acessando o site da Rocketseat')
+      linkElement.appendChild(textElement)
+
+      var containerElement = document.querySelector('#app')
+      containerElement.appendChild(linkElement)
+
+      var inputElement = document.querySelector('#nome')
+      var buttonElement = document.querySelector('button.botao')
+      containerElement.removeChild(inputElement)
+      containerElement.removeChild(buttonElement)
+    </script>
+  </body>
+</html>

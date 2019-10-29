@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title></title>
+	</head>
+	<body>
+		<canvas width="600" height="400"></canvas>
+		<script charset="utf-8">
+			var tela = document.querySelector('canvas');
+			var pincel = tela.getContext('2d');
+			pincel.fillStyle = 'lightgray';
+			pincel.fillRect(0, 0, 600, 400);
+
+			function desenhaCirculo(x, y, raio) {
+				pincel.fillStyle = 'blue';
+				pincel.beginPath();
+				pincel.arc(x, y, raio, 0, 2 * Math.PI);
+				pincel.fill();
+			}
+
+			function limpaTela() {
+				pincel.clearRect(0, 0 , 600, 400);
+			}
+
+			var x = 20;
+			var sentido = 1; // encrementador
+			function atualizaTela() {
+				limpaTela();
+
+				if (x > 600) { // quando x for maior que 600 decremanta
+					sentido = -1; // fazendo a bolinha voltar.
+				} else if (x < 0) { // quando x for menor que 0 encremanta
+					sentido = 1;    // efeito vai-e-vem.
+				}
+
+				desenhaCirculo(x, 20, 10);
+				x += sentido; // essa equação recebe a verificação do if
+				              // alterando a posição de x
+			}
+
+			setInterval(atualizaTela, 10);
+
+		</script>
+	</body>
+</html>

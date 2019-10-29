@@ -1,0 +1,33 @@
+.masthead{
+    padding: 8rem 0;
+    box-shadow: inset 3px 2px 10px rgba(0, 0, 0, .3)
+}
+
+.features-icons{
+    padding: 4rem 0;    
+}
+
+.features-icons .features-icons-icon{
+    margin-bottom: 4rem;
+}
+
+.features-icons .features-icons-icon i{
+    font-size: 5rem;
+}
+
+.features-icons a.btn{
+    margin-top: 2rem;
+}
+
+.feature-presents{
+    padding: 4rem 0;
+}
+
+.feature-presents h2{
+    margin-bottom: 3rem;
+}
+
+.btn{
+    border-width: 1px;
+    border-style: solid;
+}

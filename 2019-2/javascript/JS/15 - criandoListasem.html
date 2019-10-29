@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var nomes = ["Bruno", "Marga", "Mica"];
+
+      var lista = document.createElement("ul");
+      var aLista = document.createElement("li");
+      var aLista1 = document.createElement("li");
+      var aLista2 = document.createElement("li");
+
+      lista.appendChild(aLista);
+      lista.appendChild(aLista1);
+      lista.appendChild(aLista2);
+
+      var oText = document.createTextNode(nomes[0]);
+      var oText1 = document.createTextNode(nomes[1]);
+      var oText2 = document.createTextNode(nomes[2]);
+
+      aLista.appendChild(oText);
+      aLista1.appendChild(oText1);
+      aLista2.appendChild(oText2);
+
+      var containerLista = document.querySelector("body");
+      containerLista.appendChild(lista);
+    </script>
+  </body>
+</html>

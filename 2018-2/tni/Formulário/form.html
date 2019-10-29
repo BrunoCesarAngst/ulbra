@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>formulário</title>
+	<link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+
+	<header>
+		<h1>Meu Primeiro Formulário</h1>
+	</header><!-- /header -->
+
+<section>
+	<form>
+		<fieldset>
+			<legend>Dados Pessoais</legend>
+			<label for="nome">Primeiro nome: </label>
+			<input type="text" name="Primeiro nome" value="Bruno" placeholder="Primeiro nome"><br>
+			<label for="nome">Último nome: </label>
+			<input type="text" name="Ultimo nome" value="Angst" placeholder="Último nome"><br>
+			<label for="data">Data de Nascimento: </label>
+			<input type="text" name="DD" value="DD" placeholder="DD" size="2"> - 
+			<input type="text" name="MM" value="MM" placeholder="MM" size="2"> - 
+			<input type="text" name="AA" value="AA" placeholder="AA" size="2"><br>
+			<label for="cpf">CNPJ / CPF: </label>
+			<input type="text" name="cpf" value="" placeholder="CPF" size="10"> - 
+			<input type="text" name="cpf" value="" placeholder="Digto" size="3"><br>
+			<label for="RG">RG: </label>
+			<input type="number" name="RG" value="" placeholder="RG"><br>
+		</fieldset>
+	
+		<fieldset>
+			<legend>Dados de Endereço</legend>
+			<label for="">Rua:</label>
+			<input type="text" name="Rua" value="" placeholder="Rua"><br>
+			<label for="">Nº:</label>
+			<input type="text" name="Numero" value="" placeholder="Numero"><br>
+			<label for="">Bairro:</label>
+			<input type="text" name="Bairro" value="" placeholder="Bairro"><br>
+			<label for="">Estado:</label>
+			<select class="input" name="Estado">
+				<option value="">Rio Grande do Sul</option>
+				<option value="">Santa Catarina</option>
+				<option value="">Paraná</option>
+			</select>
+			<br><label for="">Cidade:</label>
+			<input type="text" name="Cidade" value="Cidade" placeholder="Cidade"><br>
+			<label for="">CEP:</label>
+			<input type="text" name="CEP" value="CEP" placeholder="CEP" size="5"> - 
+			<input type="text" name="CEP" value="" placeholder="" size="3">
+		</fieldset>
+	
+		<fieldset>
+			<legend>Dados de Login</legend>
+			<label for="">E-mail: </label>
+			<input type="email" name="" value="" placeholder=""><br>
+			<label for="">Imagem de perfil: </label>
+			<input type="file" name="" value="" placeholder=""><br>
+			<label for="">Login: </label>
+			<input type="text" name="" value="" placeholder=""><br>
+			<label for="">Senha: </label>
+			<input type="password" name="" value="" placeholder=""><br>
+			<label for="">Confirme a Senha: </label>
+			<input type="password" name="" value="" placeholder="" maxlength="10">
+		</fieldset>
+	</form>
+</section>
+
+<footer>
+	<h3>Criação de Bruno César Angst</h3>
+</footer>
+
+</body>
+</html>

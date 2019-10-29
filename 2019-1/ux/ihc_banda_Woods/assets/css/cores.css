@@ -1,0 +1,47 @@
+.cor-fundo-menu-navegacao{
+    background-color: #fff;
+}
+
+.cor-logo{
+    color: #2196f3;
+}
+
+.cor-item-menu{
+    color: #2196f3 !important;
+}
+
+.cor-botao-principal{
+    background-color: #fff;
+    border-color: #2196f3;
+    color: #2196f3;
+}
+
+.cor-fundo-banner-principal{
+    background-color: #2196f3;
+}
+
+.cor-texto-banner-principal{
+    color: #ffffff;
+}
+
+.cor-icones{
+    color: #2196f3;
+}
+
+.cor-fundo-grande-paragrafo{
+    background-color: #fff;
+}
+
+.cor-titulo-grande-paragrafo{
+    color: #2196f3;
+}
+
+.cor-do-texto{
+    color: #333;
+}
+
+.cor-botao-secundario{
+    background-color: #ccc;
+    border-color: #fff;
+    color: #333;
+}

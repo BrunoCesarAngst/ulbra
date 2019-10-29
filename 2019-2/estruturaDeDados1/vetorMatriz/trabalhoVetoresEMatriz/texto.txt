@@ -1,0 +1,30 @@
+esse é um vídeo explicativo sobre vetores e matrizes
+
+Criação e produção de Bruno e Ramon
+
+imagem vetres-e-matrizes
+
+Um vetor é um tipo de variavel que pode armazenar varios dados do mesmo tipo, 
+os vetores tem um tamanho limite que deve ser definido no momento da sua 
+criaçao.
+
+Um vetor pode ser comparado com uma caixa, cheia de pequenas reparticoes
+onde cada reparticao recebe um numero de identificacao (indice)
+
+Um vetor é uma estrutura de dados de uma dimensao
+
+Uma matriz nada mais é do que um vetor bidimencional ou multi-dimencional pode 
+ser comparada com uma tabela onde existem colunas e linhas
+
+as matrizes multi-dimencional também podem ter planos; 
+ex: char matriz[6][4][3] no exemplo a matriz  tem 5 colunas, 4 linhaas 
+e 3 planos.
+
+Vetores e matrizes são compostos por um sistema de indices onde cada indice 
+indica um espaço dentro de sua extrutura
+
+Nos vetores e matrizes, a contagem é iniciada pelo indice 0, portando um vetor de tamanho 4  inicia no indice 0 e termina no indice 3
+
+jogo da velha
+
+horizontal, vertical, diagonal

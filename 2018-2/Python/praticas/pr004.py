@@ -1,0 +1,6 @@
+inf = input('digite algo: ')
+print('A informação é letra - {}'.format(inf.isalpha()))
+print('A informação é número - {}'.format(inf.isnumeric()))
+print('A informação é alfanumérica - {}'.format(inf.isalnum()))
+print('A informação é decimal- {}'.format(inf.isdecimal()))
+print('A informação é dígito- {}'.format(inf.isdigit()))

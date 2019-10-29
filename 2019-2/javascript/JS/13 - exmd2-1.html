@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+
+      <button>Clica em mim, para ver o que acontece!!!</button>
+      <br />
+      <div class="boxes"></div>
+      
+
+    <script>
+
+      var btn = document.querySelector('button')
+      btn.addEventListener('click', createBox)
+
+      function createBox() {
+                
+        var createBox = document.createElement('div')
+        createBox.style.width = 150
+        createBox.style.height = 100
+        createBox.style.backgroundColor = '#f009'
+        createBox.style.float = 'left'
+        
+        document.querySelector('.boxes').appendChild(createBox)
+      }
+      // .boxes{margin-top: 20px}
+
+    </script>
+  </body>
+</html>

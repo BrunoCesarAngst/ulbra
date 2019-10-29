@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title></title>
+	</head>
+	<body>
+		<canvas width="600" height="400"></canvas>
+		<script charset="utf-8">
+			var tela = document.querySelector('canvas');
+			var pincel = tela.getContext('2d');
+
+			pincel.fillStyle = 'lightgray';
+			pincel.fillRect(0, 0, 600, 400);
+
+			var xAleatorio;
+			var yAleatorio;
+
+			var raio = 10;
+
+			function desenhaCirculo(x, y, raio, cor) {
+
+				pincel.fillStyle = cor;
+				pincel.beginPath();
+				pincel.arc(x, y, raio, 0, 2 * Math.PI); // biblioteca Math
+				pincel.fill();
+			}
+
+			function limpaTela() {
+				pincel.clearRect(0, 0, 600, 400);
+			}
+
+			function desenhaAlvo(x, y) {
+				
+				desenhaCirculo(x, y, raio + 20, 'red');
+				desenhaCirculo(x, y, raio + 10, 'white');
+				desenhaCirculo(x, y, raio, 'red');
+
+			}
+
+			function sorteiaPosicao(maximo) {
+				return Math.floor(Math.random() * maximo);
+			}
+
+			function atualizaTela() {
+				limpaTela();
+				xAleatorio = sorteiaPosicao(600);
+				yAleatorio = sorteiaPosicao(400);
+				desenhaAlvo(xAleatorio, yAleatorio);
+			}
+			setInterval(atualizaTela, 900)
+
+
+			function dispara (evento) {
+				var x = evento.pageX - tela.offsetLeft;
+				var y = evento.pageY - tela.offsetTop;
+				
+				if (x > xAleatorio - raio 
+						&& x < xAleatorio + raio 
+							&& y > yAleatorio - raio 
+								&& y < yAleatorio + raio) {
+					alert('Você acertou!!!');
+				} 
+			}
+
+			tela.onclick = dispara; 
+
+		</script>
+	</body>
+</html>

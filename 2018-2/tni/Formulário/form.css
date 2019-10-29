@@ -1,0 +1,35 @@
+body{
+	background-color: lightgoldenrodyellow;
+	margin: 0, auto;
+}
+
+header{
+	text-align: center;
+	background-color: gray;
+	margin: auto;
+	width: 45%;
+}
+
+section{
+	padding: 
+}
+
+fieldset{
+	color: green;
+	margin: auto;
+	display: block;
+	width: 35%;	
+}
+
+label{
+	float: left;
+	display: block;
+	width: 30%;
+}
+
+footer{
+	text-align: center;
+	background-color: gray;
+	margin: auto;
+	width: 45%;
+}

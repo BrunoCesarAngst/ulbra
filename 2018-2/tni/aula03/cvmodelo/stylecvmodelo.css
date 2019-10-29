@@ -1,0 +1,56 @@
+body{
+	/* A4 em pixel baixa resulução 595 x 842*/
+	/* A4 em pixel alta resolução 23811 x 33676*/
+	/* width: 80%;
+	height: 842px;
+	background-color: white;
+	background-image: url("images.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed; */
+}
+
+h1{
+	text-transform: uppercase;
+	border-radius: 15px;
+	padding: 15px;
+	background-color: green;
+	text-align: center;
+}
+
+img{
+	float: left;
+	margin-right: 30px;
+	border-radius: 50%;
+}
+
+address{
+	font-size: 20px;
+	width: 300px;
+	border: 25px solid seagreen
+	padding: 25px;
+	float: right;
+	margin-right: 70px;
+}
+
+.isolar{
+	margin: 30px;
+}
+
+.afastar{
+	margin: 30px;
+}
+
+.leftside{
+	width: 50%;
+	border-right: 6px solid black;
+	float: left;
+	/* background-color: red; */
+}
+
+.rightside{
+	/* width: 60%; */
+	/* float: right; */
+	/* border-left: 6px solid black; */
+	/* background-color: green; */
+}

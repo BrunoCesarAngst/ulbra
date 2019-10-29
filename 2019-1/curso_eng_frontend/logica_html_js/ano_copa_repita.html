@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Anos de copa</title>
+		
+	</head>
+	<body>
+		<script>
+
+			function pulaLinha() {
+				document.write("<br><br>");
+			}
+
+			function escreva(frase) {
+				document.write(frase);
+				pulaLinha();
+			}
+
+			var anoLimite = parseInt(prompt("Informe ano limite"));
+
+			var anoCopa = 1930;
+
+			while (anoCopa <= anoLimite) {
+				escreva("Teve copa em " + anoCopa);
+				anoCopa += 4;
+			}
+			escreva("fim!");
+		</script>
+	</body>
+</html

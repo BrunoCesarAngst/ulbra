@@ -1,0 +1,19 @@
+{
+  "C_Cpp.autocomplete": "Disabled",
+  "C_Cpp.formatting": "Disabled",
+  "C_Cpp.errorSquiggles": "Disabled",
+  "C_Cpp.intelliSenseEngine": "Disabled",
+  "files.associations": {
+    "array": "cpp",
+    "chrono": "cpp",
+    "functional": "cpp",
+    "istream": "cpp",
+    "memory_resource": "cpp",
+    "ostream": "cpp",
+    "ratio": "cpp",
+    "tuple": "cpp",
+    "type_traits": "cpp",
+    "utility": "cpp",
+    "variant": "cpp"
+  }
+}

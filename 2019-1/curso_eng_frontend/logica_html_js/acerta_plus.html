@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Acerta plus</title>
+	</head>
+	<body>
+		<input/>
+		<button>Compare com o meu segredo!</button>
+		<script charset="utf-8">
+
+			var segredo = Math.round(Math.random() * 10);
+			var input = document.querySelector("input");
+			input.focus(); <!-- coloca o cursor (o foco) no input. //-->
+			console.log(segredo);
+
+			function verifica() {
+				if (input.value == segredo) {
+					alert("Você acertou!!!!");
+				} else {
+					alert("Você errou.");
+				}
+				input.value = ""; <!-- apaga o valor inserido anteriormente. //--> 
+				input.focus();
+			}
+
+			var button = document.querySelector("button");
+
+			button.onclick = verifica;
+			
+			
+		</script>
+	</body>
+</html>

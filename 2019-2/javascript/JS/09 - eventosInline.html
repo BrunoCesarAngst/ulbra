@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <button onclick="mostraAlerta()">Me pressione</button>
+      <button onmouseover="mostraAlerta2()">Passa aqui!</button>
+      <br />
+      <br />
+      <input onkeydown="mostraAlerta3()" />
+    </div>
+
+    <script>
+      function mostraAlerta() {
+        alert("O botão foi clicado!");
+      }
+
+      function mostraAlerta2() {
+        alert("O cursor está sobre o botão!");
+      }
+
+      function mostraAlerta3() {
+        alert("Olá do input!");
+      }
+    </script>
+  </body>
+</html>

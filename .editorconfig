@@ -1,0 +1,10 @@
+# Remova os comentários quando for usar em seu projeto <img draggable="false" class="emoji" alt="🙂" src="https://s.w.org/images/core/emoji/12.0.0-1/svg/1f642.svg">
+root = true // especifica que seu projeto inteiro a partir deste ponto irá ter um padrão baseado nas configurações deste arquivo
+
+[*] # Aqui estamos dando match em TODOS os tipos de arquivos, mas você poderia especificar passando algo como: [*.{js,py}]
+indent_style = space # Força que mesmo que alguém aperte tab, ele seja convertido para espaços isso ajuda a padronizar o tamaho da distância entre todos os editores já que o tab varia muito o espaçamento
+indent_size = 2 # Aqui estamos forçando que mesmo que o usuário de um tab ele seja equivalente a 4 espaços
+end_of_line = lf # end_of_line: defina como lf, cr ou crlf para controlar como as quebras de linha são representadas.
+charset = utf-8 # Forçamos o encode utf-8
+trim_trailing_whitespace = false # Aqui estamos removendo espaços desnecessários que ficam no final de uma linha
+insert_final_newline = true # Isso aqui é uma coisa que eu não sabia mas envolve que algumas ferramentas antigas ignoravam a última linha de arquivos caso elas não fossem preenchidas

@@ -1,0 +1,54 @@
+/*Achei por bem que essa página, tivesse as cores co coutry, então, as
+ * busquei nas paletas de cores do Adobe Color*/
+
+.cor-fundo-menu-navegacao{
+    background-color: #887d6b !important;
+}
+
+.cor-logo{
+    color: white !important;
+}
+
+.cor-item-menu{
+    color: white !important;
+}
+
+.cor-botao-principal{
+    background-color: black;
+    border-color: white;
+    color: white;
+}
+
+.cor-fundo-banner-principal{
+    background-color: #fdb28c;
+}
+
+.cor-texto-banner-principal{
+    color: white;
+}
+
+.features-icons{
+	background-color: #887d6b !important;
+}
+
+.cor-icones{
+    color: black;
+}
+
+.cor-fundo-grande-paragrafo{
+    background-color: #ffcd9d;
+}
+
+.cor-titulo-grande-paragrafo{
+    color: white;
+}
+
+.cor-do-texto{
+    color: white;
+}
+
+.cor-botao-secundario{
+    background-color: white;
+    border-color: black;
+    color: black;
+}

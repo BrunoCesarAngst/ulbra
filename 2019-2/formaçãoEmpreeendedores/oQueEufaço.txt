@@ -1,0 +1,3 @@
+Como desenvolvedor Back-end me preocupo com a regra de negócios, segurança, banco de dados e integração de webservices, programando, codificando e testando as aplicações criadas e quando necessário dando manutenção aos sistemas.
+
+Eu como desevolvedor Front-end, dou vida à interfaces, ou seja, adaptando, facilito e tiro proveito da web, conferindo um uso mais amigável e simples, em sites, aplicativos e softwares.

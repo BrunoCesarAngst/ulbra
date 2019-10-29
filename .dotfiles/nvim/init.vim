@@ -1,0 +1,1 @@
+/home/bruno/.config/nvim/init.vim

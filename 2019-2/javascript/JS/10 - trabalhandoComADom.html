@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" name="nome" id="nome" class="nome">
+      <button class="botao">Adicionar</button>
+    </div>
+
+    <script>
+      var inputElement = document.getElementById('nome')
+      var inputElement2 = document.getElementsByTagName('input')
+      //retorna sempre um vetor
+      var inputElement3 = document.getElementsByClassName('nome')
+      //retorna sempre um vetor
+      //simplificando essa busca
+      var inputElement4 = document.querySelector('div#app input')
+      var inputElement5 = document.querySelector('input[name=nome]')
+      var inputElement6 = document.querySelector('input')
+      // retorna um e o primeiro elemento da busca
+      var inputElement7 = document.querySelectorAll('input')
+      // retorna uma lista do elemento da busca
+      //criando um evento através do javaScript
+      var oTexto = document.querySelector('input[name=nome]')
+      var eventoNoElementoBotao = document.querySelector('button.botao')
+      // pegando o texto do input e mostrando no alert
+      eventoNoElementoBotao.onclick = function() {
+        var text = oTexto.value
+        alert(text)
+      }
+
+      console.log(inputElement)
+      console.log(inputElement2)
+      console.log(inputElement3)
+      console.log(inputElement4)
+      console.log(inputElement5)
+      console.log(inputElement6)
+      console.log(inputElement7)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Acerta array</title>
+	</head>
+	<body>
+		<input/>
+		<button>Compare com o meu segredos!</button>
+		<script charset="utf-8">
+
+			var segredos = [5,7,10,2,3];
+			var input = document.querySelector("input");
+			input.focus(); <!-- coloca o cursor (o foco) no input. //-->
+
+			function verifica() {
+					var achou = false;
+					for (var posicao = 0; posicao < segredos.length; posicao++) {
+							
+						if (input.value == segredos[posicao]) {
+							alert("Você acertou!!!!");
+							achou = true
+							break;
+						} 
+				}
+				if (achou == false) {
+					alert("Você errou.");
+				}
+
+				input.value = ""; <!-- apaga o valor inserido anteriormente. //--> 
+				input.focus();
+			}
+
+			var button = document.querySelector("button");
+
+			button.onclick = verifica;
+			
+			
+		</script>
+	</body>
+</html>
