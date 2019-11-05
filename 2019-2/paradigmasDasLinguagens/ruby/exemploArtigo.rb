@@ -1,5 +1,6 @@
-class Aluno
 
+class Aluno
+  "não"
 end
 
 class Professor
