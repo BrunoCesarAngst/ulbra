@@ -156,7 +156,7 @@ void Imprime_Lista(tDescritor l) {
   else {
     p = l.primeiro;
     while (p != NULL) {
-      printf("%s %s %s %s", p->dado.nome, p->dado.telefone, p->dado.email,
+      printf("(%s %s %s %s)", p->dado.nome, p->dado.telefone, p->dado.email,
              p->dado.cidade);
       p = p->elo;
     }
