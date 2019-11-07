@@ -1,3 +1,10 @@
-Como desenvolvedor Back-end me preocupo com a regra de negócios, segurança, banco de dados e integração de webservices, programando, codificando e testando as aplicações criadas e quando necessário dando manutenção aos sistemas.
+Como desenvolvedor Back-end me preocupo com a regra de negócios, segurança, banco de dados e integração de web-services, programando, codificando e testando as aplicações criadas dando manutenção e atualizando o sistemas.
 
-Eu como desevolvedor Front-end, dou vida à interfaces, ou seja, adaptando, facilito e tiro proveito da web, conferindo um uso mais amigável e simples, em sites, aplicativos e softwares.
+Eu como desenvolvedor Front-end, dou vida à interfaces, ou seja, adaptando, facilito e tiro proveito da web, conferindo um uso mais amigável e simples, em sites, aplicativos e softwares colaborando com quem quer divulgar, automatizar e dinamizar o uso de tecnologia.
+
+Como desenvolvedor Mobile sou responsável, pelo desenvolvimento de softwares e recursos para dispositivos móveis, que podem englobar desde sistemas extranet(acesso externo controlado, para negócios específicos ou propósitos), intranet(uma rede privada que assenta sobre a suíte de protocolos(um conjunto de protocolos de comunicação entre computadores em rede) da Internet, porém, de uso exclusivo de um determinado local, como, por exemplo, a rede de uma empresa, que só pode ser acessada pelos seus utilizadores ou colaboradores internos.) até aplicativos, de acordo com as necessidades da empresa ou cliente.
+
+Eu ajudo pessoas ou empresas a expandir seus horizontes digitais.
+A fazer/aprender/ter___
+De forma que __
+Sem ter que __
