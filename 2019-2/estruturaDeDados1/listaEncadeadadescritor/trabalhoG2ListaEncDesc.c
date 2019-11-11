@@ -54,8 +54,14 @@
   void reportError(int warning);
   StudentData insertStudant();
   void reportStudant();
+  int codeSearch(DescriptorData *dd, int code);
+  void listAverages(DescriptorData *dd);
   int insertAtBeginning(DescriptorData *dd, StudentData sd);
   int insertAtEnd(DescriptorData *dd, StudentData sd);
+  void excludeFromTheBeginning(DescriptorData *dd);
+  void excludeFromEnd(DescriptorData *dd);
+  void includeAfterName(DescriptorData &dd);
+  void excludeByCode(DescriptorData *dd);
   void reportList(DescriptorData dd);
   void queryByName(DescriptorData* dd);
 
@@ -85,6 +91,7 @@
       printf("\n\tMenu de opções:                                                        \n 1 -> Incluir no final.                                                      \n 2 -> Incluir no início.                                                     \n 3 -> Incluir após um nome:                                                       \n\t(ler um nome, encontrar na lista e incluir na posição posterior)      \n 4 -> Consultar por nome:                                                         \n\t(ler um nome e mostrar o registro do nome procurado)                  \n 5 -> Excluir do início.                                                     \n 6 -> Excluir do fim.                                                        \n 7 -> Excluir por código.                                                    \n 8 -> Listar todos os registros.                                             \n 9 -> Listar com médias finais:                                                   \n\t( listar os nomes dos alunos com suas médias finais calculadas)       \n10 -> Sair.                                                                  \nEscolha uma opção: ");
       scanf("%i", &answer);
 
+    // ---------- part switch-case
       switch (answer) {
       case 1:
         printf("\n\tIncluir no final.\n");
@@ -95,27 +102,32 @@
         warning = insertAtBeginning(dd, sd);
         break;
       case 3:
-        printf("Case 3\n");
+        printf("\n\tIncluir após nome.\n");
+        void includeAfterName(DescriptorData &dd);
         break;
       case 4:
         printf("Consultar por nome.\n");
         void queryByName(DescriptorData* dd);
         break;
       case 5:
-        printf("Case 5\n");
+        printf("\n\tExcluir do início.\n");
+        void excludeFromTheBeginning(DescriptorData *dd);
         break;
       case 6:
-        printf("Case 6\n");
+        printf("\n\tExcluir no final.\n");
+        void excludeFromEnd(DescriptorData *dd);
         break;
       case 7:
-        printf("Case 7\n");
+        printf("\n\tExcluir por código.\n");
+        void excludeByCode(DescriptorData *dd);
         break;
       case 8:
         printf("Case 8\n");
         reportList(*dd);
         break;
       case 9:
-        printf("Case 9\n");
+        printf("\n\tListar médias.\n");
+        void listAverages(DescriptorData *dd);
         break;
       case 10:
         printf("\n\tAté logo!!!\n");
@@ -486,7 +498,6 @@
   // ---------- function queryByName
     void queryByName(DescriptorData* dd) {
       DataLink *dl;
-      StudentData *sd;
       char name[25];
       
       if (dd->first == NULL) {
@@ -501,6 +512,159 @@
             break;
           }
           dl = dl->link;
+        }
+      }
+    }
+
+  // ---------- function includeAfterName
+    void includeAfterName(DescriptorData &dd) {
+      DataLink *dl, *auxiliary, *newNodo;
+      StudentData sd;
+      char name[25];
+      int comparator;
+
+      if (dd->first == NULL) {
+        printf("Lista vazia!!!\n");
+      } else {
+        printf("Informe o nome: ");
+        gets(name);
+
+        dl = dd->first;
+
+        while (dl != NULL) {
+          comparator = strcmp(name, dl->data.name);
+          if (comparator == 0) {
+            break;
+          }
+          dl = dl->link;
+        }
+        if (comparator == 0) {
+          sd = insertStudant();
+          newNodo = (DataLink*)malloc(sizeof(DataLink));
+          if (newNodo ==NULL) {
+            printf("Faltou memória!!!\n");
+          } else {
+            newNodo->data = sd;
+            if (dl->link == NULL) {
+              dl->link = newNodo;
+              dd->last = newNodo;
+              newNodo->link = NULL;
+            } else {
+              auxiliary = dl->link;
+              dl->link = newNodo;
+              newNodo->link = auxiliary;
+            }
+            dd->amountOfData++;
+          }
+        }
+      }
+
+    }
+
+  // ---------- function excludeFromTheBeginning
+    void excludeFromTheBeginning(DescriptorData *dd) {
+      DataLink *newNodo;
+
+      if (dd->first == NULL) {
+        printf("Lista vazia!!!\n");
+      } else {
+        newNodo = dd->first;
+        dd->first = newNodo->link;
+        free(newNodo);
+        if (dd->first == NULL){
+          dd->last= NULL; 
+        }
+        dd->amountOfData--;
+      }
+    }
+
+  // ---------- function codeSearch
+    int codeSearch(DescriptorData *dd, int code) {
+      DataLink *dl;
+
+      dl = dd->first;
+
+      while (dl != NULL) {
+        if (code == dl->data.code) {
+          return code;
+          break;
+        }
+        dl = dl->link;
+      }
+    }
+
+  // ---------- function excludeFromEnd
+    void excludeFromEnd(DescriptorData *dd) {
+      DataLink *dl, *previous;
+
+      if (dd->first == NULL) {
+        printf("Lista vazia!!!\n");
+      } else {
+        dl = dd->first;
+        while (dl->link != NULL) {
+          previous = dl;
+          dl = dl->link;
+        }
+        if (dl == dd->first) {
+          dd->first = NULL;
+          dd->last = NULL;
+        } else {
+          previous->link = dl->link;
+          dd->last = previous;
+        }
+        free(dl);
+        dd->amountOfData--;
+      }
+    }
+
+  // ---------- function excludeByCode
+    void excludeByCode(DescriptorData *dd) {
+      DataLink *dl, *auxiliary, *finale, *previous, *next;
+      int code;
+
+      if (dd->first == NULL) {
+        printf("Lista vazia!!!\n");
+      } else {
+        printf("Qual o código do cadastro que será removido: ");
+        scanf("%d", &code);
+        if (codeSearch(dd, code) == 0) {
+          printf("Código não encontrado!!!\n");
+        } else {
+          dl = dd->first;
+          finale = dd->last;
+          if (code == dl->data.code) {
+            excludeFromEnd(dd);
+          } else if (code == finale->data.code) {
+            excludeFromTheBeginning(dd);
+          } else {
+            auxiliary = dd->first;
+            while (auxiliary != NULL) {
+              if(code == auxiliary->data.code) {
+                break;
+              }
+              previous = auxiliary;
+              auxiliary = auxiliary->link;
+            }
+            next = auxiliary->link;
+            previous->link = next;
+            free(auxiliary);
+            dd->amountOfData--;
+          }
+        }
+      }
+    }
+
+  // ---------- function listAverages
+    void listAverages(DescriptorData *dd) {
+      DataLink *dl;
+
+      if (dd->first == NULL) {
+        printf("Lista vazia!!!\n");
+      } else {
+        dl = dd->first;
+
+        while (dl != NULL) {
+          printf("\nO aluno %s, tem nota média de %.1f.\n", dl->data.nome, (dl->data.gradesG1 + (dl->data.gradesG2 * 2) / 3));
         }
       }
     }
