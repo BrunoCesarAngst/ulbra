@@ -57,7 +57,7 @@
   int insertAtBeginning(DescriptorData *dd, StudentData sd);
   int insertAtEnd(DescriptorData *dd, StudentData sd);
   void reportList(DescriptorData dd);
-  int consultarPorNome(DescriptorData *dd);
+  void queryByName(DescriptorData* dd);
 
 // ---------- main
   int main() {
@@ -99,8 +99,7 @@
         break;
       case 4:
         printf("Consultar por nome.\n");
-        getchar();
-        consultarPorNome(&dd);
+        void queryByName(DescriptorData* dd);
         break;
       case 5:
         printf("Case 5\n");
@@ -482,37 +481,26 @@
           //TODO - fazer a representação gráfica.
         }
       }
+    }
 
-  }
-  // ---------- function reportError
-    int consultarPorNome(DescriptorData *dd) {
+  // ---------- function queryByName
+    void queryByName(DescriptorData* dd) {
       DataLink *dl;
       StudentData *sd;
       char name[25];
-      int i = 0;
-      int a = 0;
-
+      
       if (dd->first == NULL) {
-      printf("Falta de Memória!!!");
-    } else {
-      printf("informe o nome: ");
-      gets(name);
-      dl = dd->first;
-      while (dl != NULL) {
-        a = strcmp(name, dl->data.name);
-        if (a == 0) {
-          reportStudant(dl, sd);
-          break;
-        }
-      }
-
-        dl = dl->link;
-        i++;
-      }
-      if (a != 0) {
-        printf("O nome não foi encontrado!");
-        return inexistente;
+      printf("Não há registros!!!");
       } else {
-        return i;
+        printf("informe o nome: ");
+        gets(name);
+        dl = dd->first;
+        while (dl != NULL) {
+          if (strcmp(name, dl->data.name) == 0) {
+            printf("Aluno %s de código %i, contato telefone %s e email %s tem notas de G1: %f e G2: %f.",  dl->data.name, dl->data.code, dl->data.fone, dl->data.email, dl->data.gradesG1, dl->data.gradesG2);
+            break;
+          }
+          dl = dl->link;
+        }
       }
     }
