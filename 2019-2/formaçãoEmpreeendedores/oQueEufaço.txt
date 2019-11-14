@@ -5,6 +5,8 @@ Eu como desenvolvedor Front-end, dou vida à interfaces, ou seja, adaptando, fac
 Como desenvolvedor Mobile sou responsável, pelo desenvolvimento de softwares e recursos para dispositivos móveis, que podem englobar desde sistemas extranet(acesso externo controlado, para negócios específicos ou propósitos), intranet(uma rede privada que assenta sobre a suíte de protocolos(um conjunto de protocolos de comunicação entre computadores em rede) da Internet, porém, de uso exclusivo de um determinado local, como, por exemplo, a rede de uma empresa, que só pode ser acessada pelos seus utilizadores ou colaboradores internos.) até aplicativos, de acordo com as necessidades da empresa ou cliente.
 
 Eu ajudo pessoas ou empresas a expandir seus horizontes digitais.
-A fazer/aprender/ter___
-De forma que __
-Sem ter que __
+A fazer/aprender/ter___ A ter uma solução mobile e/ou web que facilita o controle, manipulação e a visualização, dando dinamismo e automação no uso de tecnologia e da internet, dando vida a interfaces.
+De forma que __ de forma que possa ter acesso externo controlado, para negócios ou propósitos específicos (extranet), uma rede privada de comunicação entre computadores em rede na Internet, porém, de uso exclusivo de um determinado local, que só pode ser acessada pelos seus utilizadores ou colaboradores internos, até aplicativos, de acordo com as necessidades específicas de empresas ou clientes.
+Sem ter que __ Sem ter que se preocuparem mais com processos manuais ou com preparo e armazenamento de documentos físicos
+
+

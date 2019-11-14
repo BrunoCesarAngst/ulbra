@@ -60,7 +60,7 @@
   int insertAtEnd(DescriptorData *dd, StudentData sd);
   void excludeFromTheBeginning(DescriptorData *dd);
   void excludeFromEnd(DescriptorData *dd);
-  void includeAfterName(DescriptorData &dd);
+  void includeAfterName(DescriptorData *dd);
   void excludeByCode(DescriptorData *dd);
   void reportList(DescriptorData dd);
   void queryByName(DescriptorData* dd);
@@ -90,6 +90,7 @@
       
       printf("\n\tMenu de opções:                                                        \n 1 -> Incluir no final.                                                      \n 2 -> Incluir no início.                                                     \n 3 -> Incluir após um nome:                                                       \n\t(ler um nome, encontrar na lista e incluir na posição posterior)      \n 4 -> Consultar por nome:                                                         \n\t(ler um nome e mostrar o registro do nome procurado)                  \n 5 -> Excluir do início.                                                     \n 6 -> Excluir do fim.                                                        \n 7 -> Excluir por código.                                                    \n 8 -> Listar todos os registros.                                             \n 9 -> Listar com médias finais:                                                   \n\t( listar os nomes dos alunos com suas médias finais calculadas)       \n10 -> Sair.                                                                  \nEscolha uma opção: ");
       scanf("%i", &answer);
+      getchar();
 
     // ---------- part switch-case
       switch (answer) {
@@ -103,23 +104,23 @@
         break;
       case 3:
         printf("\n\tIncluir após nome.\n");
-        void includeAfterName(DescriptorData &dd);
+        includeAfterName(dd);
         break;
       case 4:
         printf("Consultar por nome.\n");
-        void queryByName(DescriptorData* dd);
+        queryByName(dd);
         break;
       case 5:
         printf("\n\tExcluir do início.\n");
-        void excludeFromTheBeginning(DescriptorData *dd);
+        excludeFromTheBeginning(dd);
         break;
       case 6:
         printf("\n\tExcluir no final.\n");
-        void excludeFromEnd(DescriptorData *dd);
+        excludeFromEnd(dd);
         break;
       case 7:
         printf("\n\tExcluir por código.\n");
-        void excludeByCode(DescriptorData *dd);
+        excludeByCode(dd);
         break;
       case 8:
         printf("Case 8\n");
@@ -127,7 +128,7 @@
         break;
       case 9:
         printf("\n\tListar médias.\n");
-        void listAverages(DescriptorData *dd);
+        listAverages(dd);
         break;
       case 10:
         printf("\n\tAté logo!!!\n");
@@ -144,10 +145,8 @@
       dd->first = NULL;
       dd->amountOfData = 0;
       dd->last = NULL;
-      printf("Created descriptor and initialized!");
-      printf("\nDescriptor first : %i", dd->first);
-      printf("\nDescriptor amountOfData : %i", dd->amountOfData);
-      printf("\nDescriptor last : %i", dd->last);
+      printf("\n\tCreated descriptor and initialized!");
+      printf("\nDescriptor first : %i | amountOfData: %i | last: %i\n", dd->first, dd->amountOfData, dd->last);
       // graphic representation
           //          Descriptor dd
           // +-------+--------------+------+
@@ -191,10 +190,9 @@
 
   // ---------- function reportStudant
     void reportStudant(DataLink *dl, StudentData *sd) {
-      printf("Aluno %s de código %i, contato telefone %s e email %s tem notas de G1: %f e G2: %f.",  dl->data.name, dl->data.code, dl->data.fone, dl->data.email, dl->data.gradesG1, dl->data.gradesG2);
+      printf("Aluno %s de código %i, contato telefone %s e email %s tem notas de G1: %.1f e G2: %.1f.",  dl->data.name, dl->data.code, dl->data.fone, dl->data.email, dl->data.gradesG1, dl->data.gradesG2);
       printf("\n");
     }
-
   
   // ---------- function insertAtEnd 
     int insertAtEnd(DescriptorData *dd, StudentData sd) {
@@ -517,7 +515,7 @@
     }
 
   // ---------- function includeAfterName
-    void includeAfterName(DescriptorData &dd) {
+    void includeAfterName(DescriptorData *dd) {
       DataLink *dl, *auxiliary, *newNodo;
       StudentData sd;
       char name[25];
@@ -541,7 +539,7 @@
         if (comparator == 0) {
           sd = insertStudant();
           newNodo = (DataLink*)malloc(sizeof(DataLink));
-          if (newNodo ==NULL) {
+          if (newNodo == NULL) {
             printf("Faltou memória!!!\n");
           } else {
             newNodo->data = sd;
@@ -556,6 +554,8 @@
             }
             dd->amountOfData++;
           }
+        } else {
+          printf("\n\tNome não Encontrado!!!\n");
         }
       }
 
@@ -664,7 +664,8 @@
         dl = dd->first;
 
         while (dl != NULL) {
-          printf("\nO aluno %s, tem nota média de %.1f.\n", dl->data.nome, (dl->data.gradesG1 + (dl->data.gradesG2 * 2) / 3));
+          printf("\nO aluno %s, tem nota média de %.1f.\n", dl->data.name, (dl->data.gradesG1 + (dl->data.gradesG2 * 2) / 3));
+          dl = dl->link; 
         }
       }
     }
