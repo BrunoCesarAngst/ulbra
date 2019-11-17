@@ -13,7 +13,7 @@
     -- ( ##cod_endereço, estado, cidade, CEP, bairro, logradouro, número, complemento, **cod_tipo_end): 
       -- **cod_tipo_end referência tipos_endereços(##cod_tipo_endereço);
 
-  -- clientes( ##cod_cliente, nome, email, CPF, CNPJ):
+  -- clientes( ##cod_cliente, client_code_fk, email, CPF, CNPJ):
 
   -- Profissionais( ##cod_profissional, nome, email, CPF, CNPJ):
 
@@ -75,7 +75,7 @@
     );
   select * from address_types;
 
-    create table address(
+    create table the_address(
       address_code serial primary key,
       in_state text not null,
       city text not null,
@@ -83,10 +83,10 @@
       neighborhood text not null,
       street text not null,
       land_number int not null,
-      complement text not null,
+      complement text,
       address_type_code_fk int not null references address_types(address_type_code)
     );
-  select * from address;
+  select * from the_address;
 
     create table customers(
       client_code serial primary key,
@@ -108,19 +108,17 @@
 
     create table clients_address(
       client_address_code serial primary key,
-      address_code_fk int not null references address(address_code),
+      client_address_code_fk int not null references the_address(address_code),
       client_code_fk int not null references customers(client_code)
     );
   select * from clients_address;
 
     create table professionals_address(
       professional_address_code serial primary key,
-      address_code_fk int not null references address(address_code),
+      address_code_fk int not null references the_address(address_code),
       professional_code_fk int not null references professionals(professional_code)
     );
   select * from professionals_address;
-
-  drop table professionals_address;
 
     create table phones(
       phone_code serial primary key,
@@ -131,13 +129,15 @@
 
     create table customers_phones(
       client_phone_code serial primary key,
+      phone_code_fk int not null references phones(phone_code),
       client_code_fk int not null references customers(client_code)
     );
   select * from customers_phones;
 
     create table professionals_phones(
       profissional_phone_code serial primary key,
-      profissional_code_fk int not null references professionals(professional_code)
+      phone_code_fk int not null references phones(phone_code),
+      professional_code_fk int not null references professionals(professional_code)
     );
   select * from professionals_phones;
 
@@ -183,3 +183,59 @@
       professional_code_fk int not null references professionals(professional_code)
     );
   select * from professional_appointments;
+
+-- parte das avaliações
+    create table type_score(
+      type_score_code serial primary key,
+      score_value int not null
+    );
+  select * from type_score;
+
+    create table score(
+      score_code serial primary key,
+      score_comment text,
+      type_score_code_fk int not null,
+      professional_code_fk int not null references professionals(professional_code)
+    );
+  select * from score;
+
+-- parte da população
+
+-- parte das funções
+
+  create function fun_verifica_agendamentos() returns "trigger" as
+  $fun_verifica_agendamentos$
+    begin
+      --  verificar se a data de início é maior que a data de fim 
+      if new.data_inicio > new.data_fim then
+        raise exception 'a data de início não pode ser maior que a data de fim';
+      end if;
+      --  verificar se há sobreposição com visits_schedule existentes 
+      if exists
+        (select 1
+            from visits_schedule
+            where client_code_fk = new.client_code_fk
+              and ((data_inicio, data_fim) overlaps
+                -- overlaps esse operador resulta em verdadeiro quando dois períodos de tempo se sobrepõem e falso quando não se sobrepõem.
+                (new.data_inicio, new.data_fim))
+        )
+        then
+          raise exception 'impossível agendar - existe outro compromisso';
+      end if;
+      return new;
+    end;
+  $fun_verifica_agendamentos$ language plpgsql;
+
+  comment on function fun_verifica_agendamentos() is
+      'verifica se o agendamento é possível';
+
+  create trigger trg_agendamentos_ins
+      before insert on visits_schedule
+      for each row
+      execute procedure fun_verifica_agendamentos();
+
+  create trigger trg_agendamentos_upd
+      before update on visits_schedule
+      for each row
+      execute procedure fun_verifica_agendamentos();
+
