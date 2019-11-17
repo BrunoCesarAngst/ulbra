@@ -156,7 +156,7 @@
     );
   select * from services;
 
-    create table profissional_services(
+    create table professional_services(
       professional_service_code serial primary key,
       professional_code_fk int not null references professionals(professional_code),
       service_code_fk int not null references services(service_code)
@@ -203,8 +203,10 @@
 
 -- parte das funções
 
-  create function fun_verifica_agendamentos() returns "trigger" as
-  $fun_verifica_agendamentos$
+  create function fun_verifica_agendamentos() 
+    returns "trigger" as $fun_verifica_agendamentos$
+    declare
+
     begin
       --  verificar se a data de início é maior que a data de fim 
       if new.data_inicio > new.data_fim then
