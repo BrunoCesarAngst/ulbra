@@ -34,7 +34,7 @@ begin
   update produtos set qtd_estoque=qtd_estoque-new.quantidade
     where cod_produto = new.cod_produto_fk;
 
-  estoqueMin = (select estoque_min 
+  estoqueMin = (select estoque_min
     from produtos 
       where cod_produto=new.cod_produto_fk);
 
