@@ -630,8 +630,8 @@
         if (codeSearch(dd, code) == 0) {
           printf("Código não encontrado!!!\n");
         } else {
-          dl = dd->first;
-          finale = dd->last;
+          dl = dd->last;
+          finale = dd->first;
           if (code == dl->data.code) {
             excludeFromEnd(dd);
           } else if (code == finale->data.code) {

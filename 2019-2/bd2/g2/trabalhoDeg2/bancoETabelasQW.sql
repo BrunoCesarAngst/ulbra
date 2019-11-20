@@ -20,7 +20,7 @@
       land_number int not null,
       complement text,
       address_type_code_fk int not null references address_types(address_type_code)
-    );
+      );
   -- select * from the_address;
 
     create table customers(
