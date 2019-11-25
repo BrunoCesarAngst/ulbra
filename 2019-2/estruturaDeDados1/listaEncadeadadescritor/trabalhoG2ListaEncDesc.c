@@ -88,7 +88,7 @@
     int menu(int answer, DescriptorData *dd, StudentData sd) {
       int warning;
       
-      printf("\n\tMenu de opções:                                                        \n 1 -> Incluir no final.                                                      \n 2 -> Incluir no início.                                                     \n 3 -> Incluir após um nome:                                                       \n\t(ler um nome, encontrar na lista e incluir na posição posterior)      \n 4 -> Consultar por nome:                                                         \n\t(ler um nome e mostrar o registro do nome procurado)                  \n 5 -> Excluir do início.                                                     \n 6 -> Excluir do fim.                                                        \n 7 -> Excluir por código.                                                    \n 8 -> Listar todos os registros.                                             \n 9 -> Listar com médias finais:                                                   \n\t( listar os nomes dos alunos com suas médias finais calculadas)       \n10 -> Sair.                                                                  \nEscolha uma opção: ");
+      printf("\n\tMenu de opções:                                                        \n 1 -> Incluir no final.                                                      \n 2 -> Incluir no início.                                                     \n 3 -> Incluir após um nome:                                                       \n\t(ler um nome, encontrar na lista e incluir na posição posterior)      \n 4 -> Consultar por nome:                                                         \n\t(ler um nome e mostrar o registro do nome procurado)                  \n 5 -> Excluir do início.                                                     \n 6 -> Excluir do fim.                                                        \n 7 -> Excluir por código.                                                    \n 8 -> Listar todos os registros.                                             \n 9 -> Listar com médias finais:                                              \n\t( listar os nomes dos alunos com suas médias finais calculadas)            \n10 -> Sair.                                                                  \nEscolha uma opção: ");
       scanf("%i", &answer);
       getchar();
 
@@ -249,11 +249,11 @@
             //                  +-------+--------------+------+
             //                  | first | amountOfData | last | 
             //                  |  *dl  |       0      | NULL |
-            //                  +-------+--------------+------+                        
-            //                    /|\
-            //                     |
+            //                  +-------+--------------+------+                      
+            //                     | 
             //            +--------+
             //            |
+            //           \|/
                 // +------+------+
                 // | data | link |
                 // |  sd  | NULL | 
@@ -264,17 +264,17 @@
               //   StudentData             Descriptor dd
               // +-------------+  +-------+--------------+------+
               // |             |  | first | amountOfData | last | 
-              // |     sd      |  |  *dl  |       1      |  *dl |
+              // |     sd      |  |*newDl |       1      |*newDl|
               // |             |  +-------+--------------+------+                    
-              // +-------------+    /|\                    /|\
-              //        |            |                      |
+              // +-------------+     |                      | 
               //        |   +--------+----------------------+
-              //        V   |
+              //        |   |                                
+              //        V  \|/
                   // +------+------+
                   // | data | link |
                   // |  sd  | NULL | 
                   // +------+------+
-                  //   DataLink dl
+                  // new DataLink dl
               
         } else {
           dd->last->link = dl;
@@ -284,9 +284,10 @@
             //                  | first | amountOfData | last   | 
             //                  |*oldDl |     >=1      | *oldDl |
             //                  +-------+--------------+--------+                    
-            //                    /|\                    /|\  |                      //                     |                      |   |
+            //                     |                      |   |                      
             //            +--------+----------------------+   |                 
-            //            |           +-----------------------+            
+            //            |                                   |
+            //           \|/          +-----------------------+            
                 // +------+------+    |    +------+------+
                 // | data | link | <--+    | data | link |
                 // |  sd  |      | ------> |  sd  |      |
@@ -298,10 +299,11 @@
             //                  +-------+--------------+--------+
             //                  | first | amountOfData | last   | 
             //                  |*oldDl |     >=1      | *oldDl |
-            //                  +-------+--------------+--------+                      
-            //                    /|\                                                //                     |                           
+            //                  +-------+--------------+--------+                    
+            //                     |                                              
             //            +--------+                                         
-            //            |                                                
+            //            |                           
+            //           \|/                                               
                 // +------+------+         +------+------+
                 // | data | link |         | data | link |
                 // |  sd  |*newDl| ------> |  sd  |      |
@@ -314,11 +316,12 @@
             //                           Descriptor dd
             //                  +-------+--------------+--------+
             //                  | first | amountOfData | last   | 
-            //                  |*oldDl |       1      | *oldDl |
+            //                  |*oldDl |       1      | *newDl |
             //                  +-------+--------------+--------+                    
-            //                    /|\                     /|\                        //                     |                       |                
+            //                     |                       |                         
             //            +--------+              +--------+                         
-            //            |                       |                                  
+            //            |                       |                
+            //           \|/                     \|/                                 
                 // +------+------+         +------+------+
                 // | data | link |         | data | link |
                 // |  sd  |*newDl| ------> |  sd  |      |
@@ -330,11 +333,12 @@
             //                           Descriptor dd
             //                  +-------+--------------+--------+
             //                  | first | amountOfData | last   | 
-            //                  |*oldDl |       2      | *oldDl |
+            //                  |*oldDl |       2      | *newDl |
             //                  +-------+--------------+--------+                    
-            //                    /|\                     /|\                        //                     |                       |                
+            //                     |                       |                         
             //            +--------+              +--------+                         
-            //            |                       |                                  
+            //            |                       |                
+            //           \|/                     \|/                                 
                 // +------+------+         +------+------+
                 // | data | link |         | data | link |
                 // |  sd  |*newDl| ------> |  sd  |      |
@@ -364,10 +368,10 @@
           // |             |  |   first  | amountOfData |   last   | 
           // |     sd      |  |  *oldDl  |     >=1      |  *oldDl  |
           // |             |  +----------+--------------+----------+                 
-          // +-------------+       /|\                      /|\
-          //        |               |                        |  
+          // +-------------+        |                        |
           //        |               +-----------+------------+    
-          //        V                           |                   
+          //        |                           |  
+          //        V                          \|/                  
               // +------+------+         +------+------+
               // | data | link |         | data | link |
               // |  sd  |      |         |  sd  |      |
@@ -381,10 +385,10 @@
           //                   |   first  | amountOfData |   last   |                
           //                   |  *oldDl  |     >=1      |  *oldDl  |
           //                   +----------+--------------+----------+                
-          //                    /   /|\                      /|\
-          //                   /     |                        | 
-          //                  |      +-----------+------------+ 
-          //                  V                  |              
+          //                    /|\  |                        | 
+          //                    /    +-----------+------------+ 
+          //                   /                 | 
+          //                  /                  |              
               // +------+-------+         +------+------+
               // | data | link  |         | data | link |
               // |  sd  |*oldDl |         |  sd  |      |
@@ -396,10 +400,10 @@
           //                   |   first  | amountOfData |   last   |                
           //                   |  *oldDl  |     >=1      |  *oldDl  |
           //                   +----------+--------------+----------+                
-          //                        /|\                      /|\
           //                         |                        | 
           //                         +-----------+------------+ 
-          //                                     |              
+          //                                     | 
+          //                                    \|/             
               // +------+-------+         +------+------+
               // | data | link  | ----->  | data | link |
               // |  sd  |*oldDl |         |  sd  |      |
@@ -413,10 +417,10 @@
           //                  |   first  | amountOfData |   last   |                 
           //                  |  *oldDl  |     >=1      |  *oldDl  |
           //                  +----------+--------------+----------+                 
-          //                       /|\                      /|\
           //                        |                        | 
           //            +-----------+            +-----------+ 
-          //            |                        |             
+          //            |                        | 
+          //           \|/                      \|/            
               // +------+-------+         +------+------+
               // | data | link  | ----->  | data | link |
               // |  sd  |*oldDl |         |  sd  |      |
@@ -431,11 +435,11 @@
             // +-------------+  +-------+--------------+------+
             // |             |  | first | amountOfData | last | 
             // |     sd      |  | dl    |       0      |   dl |
-            // |             |  +-------+--------------+------+                       
-            // +-------------+     /|\                   /|\
-            //        |             |                     |
+            // |             |  +-------+--------------+------+                      
+            // +-------------+      |                     | 
             //        |    _________|_____________________|
-            //        V   |
+            //        |   |                      
+            //        V  \|/
                 // +------+------+
                 // | data | link |
                 // |  sd  |      |
@@ -448,16 +452,16 @@
             // +-------------+  +-------+--------------+------+
             // |             |  | first | amountOfData | last | 
             // |     sd      |  | dl    |       1      |   dl |
-            // |             |  +-------+--------------+------+                       
-            // +-------------+     /|\                   /|\
-            //        |             |                     |
+            // |             |  +-------+--------------+------+                      
+            // +-------------+      |                     | 
             //        |    _________|_____________________|
-            //        V   |
+            //        |   |                      
+            //        V  \|/
                 // +------+------+
-                // | data | link |              
+                // | data | link |
                 // |  sd  |      |
                 // +------+------+
-                //   DataLink dl
+                // new DataLink dl
         return (success);
       }
     }
@@ -472,23 +476,36 @@
       } else {
         dl = dd.first;
         // graphic representation
-          //                           Descriptor dd
+          // # dl that will be printed; Descriptor dd
           //                  +-------+--------------+------+
           //                  | first | amountOfData | last | 
           //                  |  dl   |     !=0      |  dl  |
           //                  +-------+--------------+------+                        
-          //                      |
-          //            +---------+     
-          //            |    
-          //            V    
-              // +------+------+
-              // | data | link |
-              // +------+------+
+          //                     /|\                    /|\
+          //            +---------+                      +------+
+          //            |                                       |    
+          //          # |                                       |
+              // +------+------+     +------+------+     +------+------+
+              // | data | link |---->| data | link |---->| data | link |
+              // +------+------+     +------+------+     +------+------+
               //   DataLink dl
         while (dl != NULL) {
           reportStudant(dl, sd);
           dl = dl->link;
-          //TODO - fazer a representação gráfica.
+          // graphic representation
+          // # dl that will be printed; Descriptor dd
+          //                  +---------+--------------+---------+
+          //                  |  first  | amountOfData | last    | 
+          //                  | dl > 1  |     > 0      |dl!=NULL |
+          //                  +---------+--------------+---------+                   
+          //                     /|\                    /|\
+          //            +---------+                      +---------------------+
+          //            |                      while dl is different from NULL |    
+          //            |                #                                     |
+              // +------+------+     +------+------+     +------+------+
+              // | data | link |---->| data | link |---->| data | link |----> ***
+              // +------+------+     +------+------+     +------+------+
+              //   DataLink dl
         }
       }
     }
@@ -504,9 +521,37 @@
         printf("informe o nome: ");
         gets(name);
         dl = dd->first;
+        // graphic representation
+          //                           Descriptor dd
+          //                  +-------+--------------+------+
+          //                  | first | amountOfData | last | 
+          //                  |  dl   |     !=0      |  dl  |
+          //                  +-------+--------------+------+                        
+          //                     /|\                    /|\
+          //            +---------+                      +------+
+          //            |                                       |    
+          //            |                                       |
+              // +------+------+     +------+------+     +------+------+
+              // | data | link |---->| data | link |---->| data | link |
+              // +------+------+     +------+------+     +------+------+
+              //   DataLink dl
         while (dl != NULL) {
           if (strcmp(name, dl->data.name) == 0) {
             printf("Aluno %s de código %i, contato telefone %s e email %s tem notas de G1: %f e G2: %f.",  dl->data.name, dl->data.code, dl->data.fone, dl->data.email, dl->data.gradesG1, dl->data.gradesG2);
+            // graphic representation
+              // # dl that will be printed; Descriptor dd
+              //                  +---------+--------------+---------+
+              //                  |  first  | amountOfData | last    | 
+              //                  | dl > 1  |     > 0      |dl!=NULL |
+              //                  +---------+--------------+---------+               
+              //                     /|\                    /|\
+              //            +---------+                      +---------------------+
+              //            |                      while dl is different from NULL | 
+              //            |                #                                     |
+                  // +------+------+     +------+------+     +------+------+
+                  // | data | link |---->| data | link |---->| data | link |----> ***
+                  // +------+------+     +------+------+     +------+------+
+                  //   DataLink dl    data.name == wanted name
             break;
           }
           dl = dl->link;
@@ -528,9 +573,38 @@
         gets(name);
 
         dl = dd->first;
+        // graphic representation
+          //                           Descriptor dd
+          //                  +-------+--------------+------+
+          //                  | first | amountOfData | last | 
+          //                  |  dl   |     !=0      |  dl  |
+          //                  +-------+--------------+------+                        
+          //                     /|\                    /|\
+          //            +---------+                      +------+
+          //            |                                       |    
+          //            |                                       |
+              // +------+------+     +------+------+     +------+------+
+              // | data | link |---->| data | link |---->| data | link |
+              // +------+------+     +------+------+     +------+------+
+              //   DataLink dl
 
         while (dl != NULL) {
           comparator = strcmp(name, dl->data.name);
+          // graphic representation
+              //                             Descriptor dd
+              //                  +---------+--------------+---------+
+              //                  |  first  | amountOfData | last    | 
+              //                  | dl > 1  |     > 0      |dl!=NULL |
+              //                  +---------+--------------+---------+               
+              //                     /|\                    /|\
+              //            +---------+                      +---------------------+
+              //            |                      while dl is different from NULL | 
+              //            |                #                                     |
+                  // +------+------+     +------+------+     +------+------+
+                  // | data | link |---->| data | link |---->| data | link |----> ***
+                  // +------+------+     +------+------+     +------+------+
+                  //   DataLink dl    data.name == wanted name
+
           if (comparator == 0) {
             break;
           }
@@ -539,18 +613,200 @@
         if (comparator == 0) {
           sd = insertStudant();
           newNodo = (DataLink*)malloc(sizeof(DataLink));
+          // graphic representation
+            // +------+------+
+            // | data | link |
+            // +------+------+
+            // new DataLink dl
+
           if (newNodo == NULL) {
             printf("Faltou memória!!!\n");
           } else {
             newNodo->data = sd;
+            // graphic representation
+              //   StudentData   
+              // +-------------+ 
+              // |             | 
+              // |     sd      | 
+              // |             |                          
+              // +-------------+   
+              //        |        
+              //        |        
+              //        V        
+                  // +------+------+
+                  // | data | link |
+                  // |  sd  |      |
+                  // +------+------+
+                  // new DataLink dl
+
             if (dl->link == NULL) {
+              //                           Descriptor dd
+              //                  +-------+--------------+------+
+              //                  | first | amountOfData | last | 
+              //                  |*oldDl |       1      |*oldDl|
+              //                  +-------+--------------+------+                    
+              //                     |                      | 
+              //            +--------+----------------------+
+              //            |                                
+              //           \|/
+                  // +------+------+
+                  // | data | link |
+                  // |  sd  |      | 
+                  // +------+------+
+                  // old DataLink dl
+
               dl->link = newNodo;
+              //                           Descriptor dd
+              //                  +-------+--------------+------+
+              //                  | first | amountOfData | last | 
+              //                  |*oldDl |       1      |*oldDl|
+              //                  +-------+--------------+------+                    
+              //                     |                      | 
+              //            +--------+----------------------+
+              //            |                                
+              //           \|/
+                  // +------+------+      +------+------+
+                  // | data | link | ---> | data | link |
+                  // |  sd  |*newDl|      |  sd  |      | 
+                  // +------+------+      +------+------+
+                  // old DataLink dl      new DataLink dl
+
               dd->last = newNodo;
+              //                           Descriptor dd
+              //                  +-------+--------------+------+
+              //                  | first | amountOfData | last | 
+              //                  |*oldDl |       1      |*newDl|
+              //                  +-------+--------------+------+                    
+              //                     |                      | 
+              //            +--------+           +----------+
+              //            |                    |           
+              //           \|/                  \|/            
+                  // +------+------+      +------+------+
+                  // | data | link | ---> | data | link |
+                  // |  sd  |*newDl|      |  sd  |      | 
+                  // +------+------+      +------+------+
+                  // old DataLink dl      new DataLink dl
+
               newNodo->link = NULL;
+              //                           Descriptor dd
+              //                  +-------+--------------+------+
+              //                  | first | amountOfData | last | 
+              //                  |*oldDl |       1      |*newDl|
+              //                  +-------+--------------+------+                    
+              //                     |                      | 
+              //            +--------+           +----------+
+              //            |                    |           
+              //           \|/                  \|/            
+                  // +------+------+      +------+------+
+                  // | data | link | ---> | data | link |
+                  // |  sd  |*newDl|      |  sd  | NULL | 
+                  // +------+------+      +------+------+
+                  // old DataLink dl      new DataLink dl
             } else {
               auxiliary = dl->link;
+              // graphic representation
+                //                             Descriptor dd
+                //                  +---------+--------------+---------+
+                //                  |  first  | amountOfData | last    | 
+                //                  | dl > 1  |     > 0      |dl!=NULL |
+                //                  +---------+--------------+---------+             
+                //                     /|\                    /|\
+                //     +----------------+                      +--------+
+                //     |                                                |
+                //     |     data.name == wanted name                   |
+                // +---+---+     +------+------+     +---+---+
+                // | d | l |---->| data | link |---->| d | l |---->   ***
+                // +---+---+     +------+------+     +---+---+
+                //                         |                                         
+                //  +------+------+       \|/                                    
+                //  | data | link |     +-----+                                   
+                //  |  sd  |      |     | aux |                                   
+                //  +------+------+     +-----+                                   
+                //  new DataLink dl                                                  
+                //                             Descriptor dd
+                //                  +---------+--------------+---------+
+                //                  |  first  | amountOfData | last    | 
+                //                  | dl > 1  |     > 0      |dl!=NULL |
+                //                  +---------+--------------+---------+             
+                //                     /|\                    /|\
+                //     +----------------+                      +--------+
+                //     |                                                |
+                //     |     data.name == wanted name                   |
+                // +---+---+     +------+------+     +---+---+
+                // | d | l |---->| data | link |     | d | l |---->   ***
+                // +---+---+     +------+------+     +---+---+
+                //                                       |
+                //  +------+------+        +-------------+                        
+                //  | data | link |       \|/                                    
+                //  |  sd  |      |     +-----+                                   
+                //  +------+------+     | aux |                                   
+                //  new DataLink dl     +-----+                                   
+                //                                                                   
+
               dl->link = newNodo;
+              // graphic representation
+                //                             Descriptor dd
+                //                  +---------+--------------+---------+
+                //                  |  first  | amountOfData | last    | 
+                //                  | dl > 1  |     > 0      |dl!=NULL |
+                //                  +---------+--------------+---------+             
+                //                     /|\                    /|\
+                //     +----------------+                      +--------+
+                //     |                                                |
+                //     |     data.name == wanted name                   |
+                // +---+---+     +------+------+     +---+---+
+                // | d | l |---->| data | link |     | d | l |---->   ***
+                // +---+---+     |      |*newDl|     +---+---+
+                //               +------+------+                
+                //                         /                                         
+                //                        /                                          
+                //                      \|/              |        
+                //                +------+------+        |                      
+                //                | data | link |       \|/                          
+                //                |  sd  |      |     +-----+                        
+                //                +------+------+     | aux |                        
+                //                new DataLink dl     +-----+                        
+                //                                                                   
+
               newNodo->link = auxiliary;
+              // graphic representation
+                //                             Descriptor dd
+                //                  +---------+--------------+---------+
+                //                  |  first  | amountOfData | last    | 
+                //                  | dl > 1  |     > 0      |dl!=NULL |
+                //                  +---------+--------------+---------+             
+                //                     /|\                    /|\
+                //     +----------------+                      +--------+
+                //     |                                                |
+                //     |     data.name == wanted name                   |
+                // +---+---+     +------+------+     +---+---+
+                // | d | l |---->| data | link |     | d | l |---->   ***
+                // +---+---+     |      |*newDl|     +---+---+
+                //               +------+------+                
+                //                         /                                         
+                //                        /                                          
+                //                      \|/              |        
+                //                +------+------+        |                      
+                //                | data | link |       \|/                          
+                //                |  sd  | *aux | --> +-----+                        
+                //                +------+------+     | aux |                        
+                //                new DataLink dl     +-----+                        
+                //                                                                   
+              // graphic representation
+                //                             Descriptor dd
+                //                  +---------+--------------+---------+
+                //                  |  first  | amountOfData | last    | 
+                //                  | dl > 1  |     > 0      |dl!=NULL |
+                //                  +---------+--------------+---------+             
+                //                     /|\                    /|\
+                //     +----------------+                      +---------------+
+                //     |                                                       |
+                //     |     data.name == wanted name                          |
+                // +---+---+     +------+------+      +------+------+      +---+---+
+                // | d | l |---->| data | link | ---->| data | link |----> | d | l |
+                // +---+---+     |      |*newDl|      |  sd  |      |      +---+---+
+                //               +------+------+      +------+------+                //                                    new DataLink dl                
+                //
             }
             dd->amountOfData++;
           }
